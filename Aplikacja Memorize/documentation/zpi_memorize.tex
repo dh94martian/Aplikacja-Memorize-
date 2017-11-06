@@ -170,52 +170,110 @@ Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ dostêp do aplikacji z urz¹dzenia
 \section{Product Backlog}
 
 \subsection{Backlog Item 1}
-\paragraph{Tytu³ zadania.} Instalujemy oraz konfigurujemy Django.
-\paragraph{Opis zadania.} Django to darmowy i open-source'owy framework, którego instalacja umo¿liwi nam utworzenie naszej aplikacji webowej. Poprzez u¿ycie poleceñ niewielkiego programu, jakim jest plik manage.py uzyskamy mo¿liwoœæ zarz¹dzania prac¹ serwera oraz bazy danych. Natomiast plik settings.py bêdzie kontrolowa³ wspó³dzia³anie Django z systemem operacyjnym oraz da nam mo¿liwoœæ zarz¹dzania projektem.
+\paragraph{Tytu³ zadania.} Instalacja i konfiguracja Django.
+\paragraph{Opis zadania.} Django to darmowy i open - source'owy framework, którego instalacja umo¿liwi nam utworzenie naszej aplikacji internetowej. Poprzez u¿ycie poleceñ niewielkiego programu, jakim jest plik manage.py uzyskamy mo¿liwoœæ zarz¹dzania prac¹ serwera oraz bazy danych. Natomiast plik settings.py bêdzie kontrolowa³ wspó³dzia³anie Django z systemem operacyjnym, 
+a tak¿e da nam mo¿liwoœæ zarz¹dzania projektem. 
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Mamy mo¿liwoœæ zarz¹dzania serwerem, baz¹ danych oraz projektem.
+\paragraph{Definition of Done.} Skonfigurowany projekt wstêpny oraz serwer. 
 
 \subsection{Backlog Item 2}
-\paragraph{Tytu³ zadania.} Tworzymy bazê danych.
+\paragraph{Tytu³ zadania.} Utworzenie bazy danych.
 \paragraph{Opis zadania.} Tworzymy tabele bazy danych w celu przechowywania informacji u¿ywanych w projekcie. Wiêkszoœæ informacji zwi¹zanych z projektem jest przez Django przechowywana w bazie danych.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Uzyskanie wspó³pracy pomiêdzy framework ma baz¹ danych.
+\paragraph{Definition of Done.} Skonfigurowany framework pracuj¹cy z baz¹ danych. 
 
 \subsection{Backlog Item 3}
-\paragraph{Tytu³ zadania.} Stworzenie i konfiguracja konta superu¿ytkownika.
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta superu¿ytkownika.
 \paragraph{Opis zadania.} Utworzenie konta superu¿ytkownika w celu nadania administratorowi mo¿liwoœci dostêpu do wszystkich przechowywanych informacji naszej aplikacji sieciowej.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Uzyskanie mo¿liwoœci bezpiecznego dostêpu do informacji przez w³aœciciela aplikacji.
+\paragraph{Definition of Done.} Bezpieczny dostêp do panelu administracyjnego dla w³aœciciela aplikacji. 
 
 \subsection{Backlog Item 4}
-\paragraph{Tytu³ zadania.}Zdefiniowanie odpowiednich klas.
-\paragraph{Opis zadania.} Tworzymy klasê Topic zawieraj¹c¹ tylko dwa atrybuty: text i dateAdded, dziêki której u¿ytkownik zyska mo¿liwoœæ dodawania ró¿nych wpisów oraz sprawdziæ czas ich dodania. Utworzenie klasy Entry , która usprawni mo¿liwoœæ dodawania wpisów poprzez powi¹zania.
+\paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
+\paragraph{Opis zadania.} Tworzymy klasê Topic zawieraj¹c¹ tylko dwa atrybuty: text i dateAdded, dziêki której u¿ytkownik uzyska mo¿liwoœæ tworzenia wielu ró¿nych tematów oraz sprawdzi kiedy dany wpis zosta³ dodany. Utworzenie klasy Entry, która usprawni mo¿liwoœæ dodawania wpisów poprzez powi¹zanie ich z okreœlonym tematem.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Uzyskanie mo¿liwoœci tworzenia wpisów.
+\paragraph{Definition of Done.} Mo¿liwoœæ dodawania wpisów. Ka¿dy wpis jest powi¹zany z okreœlonym tematem. 
 
 \subsection{Backlog Item 5}
-\paragraph{Tytu³ zadania.} Tworzenie strony g³ównej naszej aplikacji internetowej.
-\paragraph{Opis zadania.} Przygotowanie adresu URL strony g³ównej, który bêdzie bazowym adresem URL podawanym przez u¿ytkownika w celu uzyskania dostêpu do aplikacji. Nadajemy wygl¹d naszej stronie g³ównie poprzez dodanie funkcji widoku i utworzenie potrzebnych szablonów w celu spe³nienia oczekiwaæ u¿ytkownika.
+\paragraph{Tytu³ zadania.} Ograniczenie d³ugoœci wyœwietlanych wpisów na stronie tematu.
+\paragraph{Opis zadania.} Poniewa¿ ca³y wpis mo¿e mieæ postaæ doœæ d³ugiego tekstu, nakazujemy wyœwietlenie jedynie pierwszych 50 znaków przechowywanych przez atrybut
+text. Do³¹czamy równie¿ wielokropek, aby wyraŸnie wskazaæ, ze nie zosta³ wyœwietlony pe³ny wpis.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Uzyskanie mo¿liwoœci wyœwietlenia strony internetowej naszej aplikacji.
+\paragraph{Definition of Done.} D³ugoœæ wyœwietlanych wpisów na stronie tematu ograniczona do pierwszych 50 znaków. 
 
 \subsection{Backlog Item 6}
-\paragraph{Tytu³ zadania.} Tworzymy stronê wyœwietlaj¹ce tematy i zawarte w nich wpisy.
-\paragraph{Opis zadania.} Utworzenie strony internetowej poprzez zdefiniowanie jej adresu URL, która nada u¿ytkownikowi mo¿liwoœæ wgl¹du w tematy oraz poszczególne wpisy w tematach, a tak¿e poinformuje o braku tematów lub wpisów w poszczególnych tematach.
+\paragraph{Tytu³ zadania.} Utworzenie strony g³ównej naszej aplikacji internetowej.
+\paragraph{Opis zadania.} Przygotowanie adresu URL strony g³ównej, który bêdzie bazowym adresem URL podawanym przez u¿ytkownika w celu uzyskania dostêpu do aplikacji. Nadajemy wygl¹d naszej stronie g³ównie poprzez dodanie funkcji widoku i utworzenie potrzebnych szablonów w celu spe³nienia oczekiwaæ u¿ytkownika.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Uzyskanie mo¿liwoœci wyœwietlania tematów oraz powi¹zanych z nim wpisami.
+\paragraph{Definition of Done.} Mo¿liwoœæ wyœwietlenia strony g³ównej naszej aplikacji. 
 
 \subsection{Backlog Item 7}
-\paragraph{Tytu³ zadania.} Dodawanie tematów.
-\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, by w ten sposób przygotowaæ strony pozwalaj¹ce ka¿demu u¿ytkownikowi dodawaæ dane.
+\paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy.
+\paragraph{Opis zadania.} Utworzenie strony internetowej poprzez zdefiniowanie jej adresu URL, która nada u¿ytkownikowi mo¿liwoœæ wgl¹du w tematy oraz poszczególne wpisy w tematach, a tak¿e poinformuje o braku tematów lub wpisów w poszczególnych tematach.
 \paragraph{Priorytet.} Wysoki.
-\paragraph{Definition of Done.} Zyskanie mo¿liwoœci dodawania nowych tematów, wpisów oraz edycji ju¿ istniej¹cych poprzez wszystkich u¿ytkowników.
+\paragraph{Definition of Done.} Mo¿liwoœæ wyœwietlania tematów oraz powi¹zanych z nimi wpisów.
 
 \subsection{Backlog Item 8}
-\paragraph{Tytu³ zadania.} Tworzymy ³¹cza ze strony tematów.
-\paragraph{Opis zadania.} Poprzez zmodyfikowanie szablonu tematów tak, aby ka¿de ³¹cze tematu prowadzi³o na odpowiedni¹ stronê w celu przejrzystego przegl¹dania tematów przez u¿ytkownika. 
+\paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów. 
+\paragraph{Opis zadania.} Zmodyfikowanie szablonu tematów tak, aby ka¿de ³¹cze tematu prowadzi³o na odpowiedni¹ stronê w celu przejrzystego przegl¹dania tematów przez u¿ytkownika. 
 \paragraph{Priorytet.} Œredni.
-\paragraph{Definition of Done.} Mo¿liwoœæ przegl¹dania tematów na oddzielnych stronach.
+\paragraph{Definition of Done.} Mo¿liwoœæ przegl¹dania tematów na oddzielnych stronach. 
+
+\subsection{Backlog Item 9}
+\paragraph{Tytu³ zadania.} Dodawanie nowych tematów.
+\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi na dodawanie nowych tematów.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.}  Mo¿liwoœæ dodawania nowych tematów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 10}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów.  
+\paragraph{Opis zadania.}  Konieczne jest przeniesienie u¿ytkownika z powrotem na stronê z tematami. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po dodaniu nowego tematu na stronê z tematami. 
+
+\subsection{Backlog Item 11}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat.  
+\paragraph{Opis zadania.}  Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk zatwierdzaj¹cy zmiany i dodaj¹cy nowy temat. 
+
+\subsection{Backlog Item 12}
+\paragraph{Tytu³ zadania.} Dodawanie nowych wpisów.  
+\paragraph{Opis zadania.}  U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi na dodawanie nowych wpisów do 
+tematów. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ dodawania nowych wpisów do tematów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 13}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu.  
+\paragraph{Opis zadania.}  Po umieszczeniu nowego wpisu u¿ytkownik powinien zobaczyæ wpis na liœcie wszystkich wpisów dla tematu. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po dodaniu nowego wpisu na stronê tematu, do którego zosta³ dodany wpis. 
+
+\subsection{Backlog Item 14}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis.  
+\paragraph{Opis zadania.}  Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk zatwierdzaj¹cy zmiany i dodaj¹cy nowy wpis. 
+
+\subsection{Backlog Item 15}
+\paragraph{Tytu³ zadania.} Edycja wpisów.  
+\paragraph{Opis zadania.} Przygotujemy stronê pozwalaj¹c¹ u¿ytkownikom na edytowanie istniej¹cych wpisów. Nakazujemy Django utworzenie formularza wype³nionego informacjami 
+pochodz¹cymi z istniej¹cego wpisu. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ edycji istniej¹cych wpisów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 16}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania dla edytowanego wpisu.  
+\paragraph{Opis zadania.}  Po edycji istniej¹cego wpisu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê zmodyfikowanego wpisu.  
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po edycji wpisu na stronê tematu, w którym zosta³ zmodyfikowany wpis. 
+
+\subsection{Backlog Item 17}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany.  
+\paragraph{Opis zadania.}  Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk zapisuj¹cy zmiany dokonane w istniej¹cym wpisie. 
 
 \section{Sprint 1}
 \subsection{Cel} Do opracowania projektu o nazwie "Memorize!" wykorzystamy framework Django. 
@@ -223,45 +281,47 @@ Zaczniemy od przygotowania œrodowiska dla projektu, a nastêpnie zdefiniujemy
 klasy dla danych, z którymi bêdzie dzia³a³a aplikacja. 
 Witrynê administracyjn¹ Django wykorzystamy do wstawienia pewnych danych 
 pocz¹tkowych, a nastêpnie przejdziemy do tworzenia widoków i szablonów, 
-za pomoc¹ których Django bêdzie budowaæ strukturê naszej aplikacji internetowej.
+za pomoc¹ których Django bêdzie budowaæ strukturê naszej aplikacji internetowej. 
+Utworzymy intuicyjne, przyjazne u¿ytkownikom strony pozwalaj¹ce im na dodawanie nowych tematów oraz wpisów, a tak¿e na edycjê 
+istniej¹cych wpisów. 
 \subsection{Sprint Planning/Backlog}
 
-\paragraph{Tytu³ zadania.} Instalujemy oraz konfigurujemy Django.
+\paragraph{Tytu³ zadania.} Instalacja i konfiguracja Django.
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie bazy danych.
 \begin{itemize}
 \item Estymata: "S".
 \end{itemize}
 
-\paragraph{Tytu³ zadania.} Tworzymy bazê danych.
-\begin{itemize}
-\item Estymata: "S".
-\end{itemize}
-
-\paragraph{Tytu³ zadania.} Stworzenie i konfiguracja konta superu¿ytkownika.
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
 \begin{itemize}
 \item Estymata: "M".
 \end{itemize}
 
 \paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
 \begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Ograniczenie d³ugoœci wyœwietlanych wpisów na stronie tematu.
+\begin{itemize}
 \item Estymata: "L".
 \end{itemize}
 
-\paragraph{Tytu³ zadania.} Tworzenie strony g³ównej naszej aplikacji internetowej.
-\begin{itemize}
-\item Estymata: "S".
-\end{itemize}
-
-\paragraph{Tytu³ zadania.} Tworzymy stronê wyœwietlaj¹ce tematy i zawarte w nich wpisy.
+\paragraph{Tytu³ zadania.} .
 \begin{itemize}
 \item Estymata: "M".
 \end{itemize}
 
-\paragraph{Tytu³ zadania.} Tworzymy ³¹cza ze strony tematów.
+\paragraph{Tytu³ zadania.} 
 \begin{itemize}
 \item Estymata: "XS".
 \end{itemize}
 
-\paragraph{Tytu³ zadania.} Dodawanie tematów.
+\paragraph{Tytu³ zadania.} 
 \begin{itemize}
 \item Estymata: "M".
 \end{itemize}
@@ -292,11 +352,9 @@ for (i=1; i<10; i++)
 
 \section{Sprint 2}
 
-\subsection{Cel} Utworzymy intuicyjne, przyjazne u¿ytkownikom strony pozwalaj¹ce im na dodawanie nowych tematów oraz wpisów, a tak¿e na edycjê 
-istniej¹cych wpisów. Zajmiemy siê budowaniem systemu rejestracji u¿ytkowników, który pozwoli u¿ytkownikom na tworzenie kont i 
+\subsection{Cel} Zajmiemy siê budowaniem systemu rejestracji kont u¿ytkowników oraz ich autoryzacji, który pozwoli u¿ytkownikom na tworzenie kont i 
 wykorzystywanie naszej aplikacji internetowej. Umo¿liwimy ka¿demu u¿ytkownikowi znajduj¹cemu siê w dowolnym miejscu na œwiecie 
-przeprowadzenie operacji rejestracji konta w aplikacji "Memorize!" i rozpoczêcie korzystania z niej. Przygotujemy formularze 
-pozwalaj¹ce u¿ytkownikom zak³adaæ nowe tematy, dodawaæ nowe wpisy oraz edytowaæ istniej¹ce. Nastêpnie przyst¹pimy do 
+przeprowadzenie operacji rejestracji konta w aplikacji "Memorize!" i rozpoczêcie korzystania z niej. Nastêpnie przyst¹pimy do 
 implementacji systemu uwierzytelniania u¿ytkownika. Zbudujemy stronê rejestracji, która umo¿liwi u¿ytkownikom za³o¿enie konta,  
 oraz ograniczy dostêp do wybranych stron, które bêd¹ mogli wyœwietliæ tylko zalogowani u¿ytkownicy. Zmodyfikujemy niektóre 
 funkcje widoku, aby u¿ytkownicy mogli widzieæ jedynie w³asne dane. 
