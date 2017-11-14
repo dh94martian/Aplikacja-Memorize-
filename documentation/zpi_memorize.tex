@@ -475,6 +475,22 @@ W wyniku tego polecenia Django utworzy now¹ bazê danych zawieraj¹c¹ tabele niezb
 Upewniamy siê, ¿e Django utworzy³ plik o nazwie db.sqlite3. 
 Faktyczny czas spêdzony nad ukoñczeniem tego zadania pokrywa siê z przyjêt¹ wczeœniej estymat¹ "S".
 
+\paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
+\subparagraph{Wykonawca.} Damian Hada³a, Krzysztof Radoñ.
+\subparagraph{Realizacja.} Utworzyliœmy klasê o nazwie Topic. W tej klasie mamy dwa atrybuty: text i date\_added. Atrybut text jest typu CharField, co oznacza dane sk³adaj¹ce siê ze 
+znaków, czyli po prostu tekst. Podczas definiowania atrybutu typu CharField konieczne jest poinformowanie Django, jaka iloœæ miejsca na te informacje powinna byæ 
+zarezerwowana w bazie danych. Podajemy wielkoœæ 200 znaków (max\_length=200), która powinna byæ wystarczaj¹ca dla praktycznie wszystkich tytu³ów. 
+Atrybut date\_added jest typu DateTimeField, czyli przechowuje informacje o dacie i godzinie. Przekazujemy argument auto\_add\_now=True, który nakazuje Django automatyczne przypisywanie temu atrybutowi bie¿¹cej daty i godziny w chwili tworzenia nowego tematu przez u¿ytkownika. 
+Utworzyliœmy klasê o nazwie Entry. Pierwszy atrybut (topic) to egzemplarz ForeignKey, czyli klucz zewnêtrzny - ³¹czy ka¿dy wpis z okreœlonym tematem. 
+Nastêpny atrybut nosi nazwê text i jest egzemplarzem TextField. Nie narzucamy mu ¿adnych ograniczeñ dotycz¹cych wielkoœci, poniewa¿ nie chcemy ograniczaæ d³ugoœci poszczególnych 
+wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu.   
+
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
+\subparagraph{Wykonawca.} Krzysztof Jamro.
+\subparagraph{Realizacja.} Wyda³em Django polecenie utworzenia konta super - u¿ytkownika: createsuperuser i nada³em mu nazwê mm\_admin. 
+Ustawi³em te¿ przygotowane wczeœniej z w³aœcicielem produktu has³o do konta super - u¿ytkownika. Modyfikujê utworzony przez framework Django plik o nazwie admin.py 
+rejestruj¹c klasê Topic. Dziêki temu uzyskujemy mo¿liwoœæ dodawania nowych tematów przez witrynê administracyjn¹. 
+
 \paragraph{<<Tutaj dodawaæ kolejne zadania>>}
 
 
