@@ -1,0 +1,720 @@
+\documentclass[a4paper]{article}
+\usepackage{polski}
+\usepackage[cp1250]{inputenc}
+\usepackage{url}
+
+\title{\vspace{4cm} \bf{Aplikacja "Memorize!"}}
+\author{{\em Damian Hada³a, Dawid Su³owicz, Krzysztof Radoñ, Krzysztof Jamro}}
+\date{}
+
+\begin{document}
+
+\begin{titlepage}
+\maketitle
+\thispagestyle{empty}
+\bigskip
+\begin{center}
+\vspace{10cm}
+Zespo³owe przedsiêwziêcie in¿ynierskie\\[2mm]
+
+Informatyka\\[2mm]
+
+Rok. akad. 2017/2018, sem. I\\[2mm]
+
+Prowadz¹cy: dr hab. Marcin Mazur
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+
+\section{Opis projektu}
+
+\subsection{Cz³onkowie zespo³u}
+
+\begin{enumerate}
+\item Krzysztof Radoñ (kierownik projektu).
+\item Damian Hada³a.
+\item Dawid Su³owicz.
+\item Krzysztof Jamro.
+\end{enumerate}
+
+\subsection{Cel projektu (produkt)}
+
+Aplikacja internetowa "Memorize!" pozwalaj¹ca u¿ytkownikom zapisywaæ interesuj¹ce ich informacje 
+i tym samym dodawaæ wpisy do dziennika podczas poznawania danego zagadnienia. 
+Po zalogowaniu siê u¿ytkownik bêdzie mia³ mo¿liwoœæ utworzenia nowego tematu, dodania nowego wpisu, a tak¿e odczytywania i edytowania istniej¹cych wpisów.
+
+\subsection{Potencjalny odbiorca produktu (klient)}
+
+U¿ytkownicy poznaj¹cy nowe zagadnienia prowadz¹ dziennik, w którym zapisuj¹ to, czego siê nauczyli. Dziêki aplikacji "Memorize!" proces nauki i zapamiêtywania mo¿e byæ znacznie efektywniejszy.
+
+\subsection{Metodyka}
+
+Projekt bêdzie realizowany przy u¿yciu (zaadaptowanej do istniej¹cych warunków) metodyki {\em Scrum}. 
+
+\section{Wymagania u¿ytkownika}
+
+\subsection{User story 1}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ mo¿liwoœæ dostêpu do listy tematów, aby móc je w dowolnej chwili podgl¹daæ i sprawdzaæ ich zawartoœæ. 
+
+\subsection{User story 2}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ mo¿liwoœæ tworzenia nowych tematów, abym póŸniej móg³ do nich dodawaæ powi¹zane wpisy.
+
+\subsection{User story 3}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ mo¿liwoœæ sprawdzenia daty i godziny umieszczenia ka¿dego wpisu, aby móc weryfikowaæ poczynione przeze mnie postêpy w nauce.
+
+\subsection{User story 4}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê by d³ugie wpisy nie by³y wyœwietlane w postaci ci¹g³ego strumienia tekstu, aby poprawiæ czytelnoœæ podczas ich przegl¹dania.
+
+\subsection{User story 5}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê ¿eby moje wpisy by³y prywatne tak, abym tylko ja móg³ nimi zarz¹dzaæ.
+
+\subsection{User story 6}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ mo¿liwoœæ edytowania wpisów, abym móg³ zmieniaæ ich treœæ w po¿¹danej przeze mnie chwili. 
+
+\subsection{User story 7}
+
+Jako niezalogowany u¿ytkownik aplikacji "Memorize!" chcê mieæ mo¿liwoœæ zarejestrowania w³asnego profilu, abym móg³ dodawaæ w³asne treœci.
+
+\subsection{User story 8}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê ¿eby moje konto by³o chronione has³em tak, aby inny u¿ytkownik nie uzyska³ do niego dostêpu. 
+
+\subsection{User story 9}
+
+Jako niezalogowany u¿ytkownik aplikacji  "Memorize!" chcê zobaczyæ instrukcjê wyjaœniaj¹c¹ przeznaczenie tej aplikacji, abym móg³ zapoznaæ siê z jej dzia³aniem. 
+
+\subsection{User story 10}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ dostêp z ka¿dego komputera do listy selektorów i regu³, których ca³y czas siê uczê.
+
+\subsection{User story 11}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ dostêp z ka¿dego komputera do listy tematów prowadzonych przeze mnie zajêæ, abym móg³ siê w nich zorientowaæ pracuj¹c w kilku placówkach edukacyjnych.
+
+\subsection{User story 12}
+
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ dostêp z ka¿dego komputera do listy moich inspiracji, abym nie musia³ szukaæ ich papierowej wersji na wypadek, gdybym j¹ zgubi³.
+
+\subsection{User story 13 (optional)}
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ dostêp do aplikacji z urz¹dzenia mobilnego, aby móc z niej swobodnie korzystaæ z dala od komputera. 
+
+\subsection{User story 14 (optional)}
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ 
+mo¿liwoœæ dodawania do wpisów za³¹czników, abym 
+móg³ przechowywaæ w nich robocze wersje dokumentów. 
+
+\subsection{User story 15 (optional)}
+Jako u¿ytkownik aplikacji "Memorize!" chcê mieæ 
+mo¿liwoœæ formatowania tekstu wpisu, aby móc wyszczególniæ wa¿niejsze jego elementy.
+
+\section{Harmonogram}
+
+\subsection{Rejestr zadañ (Product Backlog)}
+
+\begin{itemize}
+\item Data rozpoczêcia: 24.10.2017 r.
+\item  Data zakoñczenia: 7.11.2017 r.
+\end{itemize}
+
+\subsection{Sprint 1}
+
+\begin{itemize}
+\item Data rozpoczêcia: 7.11.2017 r.
+\item Data zakoñczenia: 28.11.2017 r.
+\item Scrum Master: Damian Hada³a.
+\item Product Owner: Krzysztof Radoñ.
+\item Development Team: Krzysztof Radoñ, Dawid Su³owicz, Krzysztof Jamro, Damian Hada³a.
+\end{itemize}
+
+\subsection{Sprint 2}
+
+\begin{itemize}
+\item Data rozpoczêcia: 28.11.2017 r.
+\item Data zakoñczenia: 12.12.2017 r.
+\item Scrum Master: Krzysztof Jamro.
+\item Product Owner: Damian Hada³a.
+\item Development Team: Krzysztof Radoñ, Dawid Su³owicz, Krzysztof Jamro, Damian Hada³a.
+\end{itemize}
+
+\subsection{Sprint 3}
+
+\begin{itemize}
+\item Data rozpoczêcia: 12.12.2017 r.
+\item Data zakoñczenia: 09.01.2018 r.
+\item Scrum Master: Krzysztof Radoñ.
+\item Product Owner: Dawid Su³owicz.
+\item Development Team: Krzysztof Radoñ, Dawid Su³owicz, Krzysztof Jamro, Damian Hada³a.
+\end{itemize}
+
+\subsection{Sprint 4}
+
+\begin{itemize}
+\item Data rozpoczêcia: 09.01.2018 r.
+\item Data zakoñczenia: 23.01.2018 r.
+\item Scrum Master: Dawid Su³owicz.
+\item Product Owner: Krzysztof Jamro.
+\item Development Team: Krzysztof Radoñ, Dawid Su³owicz, Krzysztof Jamro, Damian Hada³a.
+\end{itemize}
+
+\section{Product Backlog}
+
+\subsection{Backlog Item 1}
+\paragraph{Tytu³ zadania.} Instalacja i konfiguracja Django.
+\paragraph{Opis zadania.} Django to darmowy i open - source'owy framework, którego instalacja umo¿liwi nam utworzenie naszej aplikacji internetowej. Poprzez u¿ycie poleceñ niewielkiego programu, jakim jest plik manage.py uzyskamy mo¿liwoœæ zarz¹dzania prac¹ serwera oraz bazy danych. Natomiast plik settings.py bêdzie kontrolowa³ wspó³dzia³anie Django z systemem operacyjnym, 
+a tak¿e da nam mo¿liwoœæ zarz¹dzania projektem. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Skonfigurowany projekt wstêpny oraz serwer. 
+
+\subsection{Backlog Item 2}
+\paragraph{Tytu³ zadania.} Utworzenie bazy danych.
+\paragraph{Opis zadania.} Tworzymy tabele bazy danych w celu przechowywania informacji u¿ywanych w projekcie. Wiêkszoœæ informacji zwi¹zanych z projektem jest przez Django przechowywana w bazie danych.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Skonfigurowany framework pracuj¹cy z baz¹ danych. 
+
+\subsection{Backlog Item 3}
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
+\paragraph{Opis zadania.} Utworzenie konta superu¿ytkownika w celu nadania administratorowi mo¿liwoœci dostêpu do wszystkich przechowywanych informacji naszej aplikacji sieciowej.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Bezpieczny dostêp do panelu administracyjnego dla w³aœciciela aplikacji. 
+
+\subsection{Backlog Item 4}
+\paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
+\paragraph{Opis zadania.} Tworzymy klasê Topic zawieraj¹c¹ tylko dwa atrybuty: text i dateAdded, dziêki której u¿ytkownik uzyska mo¿liwoœæ tworzenia wielu ró¿nych tematów oraz sprawdzi kiedy dany wpis zosta³ dodany. Utworzymy te¿ klasê Entry, która usprawni mo¿liwoœæ dodawania wpisów poprzez powi¹zanie ich z okreœlonym tematem.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ dodawania wpisów. Ka¿dy wpis jest powi¹zany z okreœlonym tematem. 
+
+\subsection{Backlog Item 5}
+\paragraph{Tytu³ zadania.} Ograniczenie d³ugoœci wyœwietlanych wpisów na stronie tematu.
+\paragraph{Opis zadania.} Poniewa¿ ca³y wpis mo¿e mieæ postaæ doœæ d³ugiego tekstu, nakazujemy wyœwietlenie jedynie pierwszych 50 znaków przechowywanych przez atrybut
+text. Do³¹czamy równie¿ wielokropek, aby wyraŸnie wskazaæ, ze nie zosta³ wyœwietlony pe³ny wpis.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} D³ugoœæ wyœwietlanych wpisów na stronie tematu ograniczona do pierwszych 50 znaków. 
+
+\subsection{Backlog Item 6}
+\paragraph{Tytu³ zadania.} Utworzenie strony g³ównej naszej aplikacji internetowej.
+\paragraph{Opis zadania.} Przygotowanie adresu URL strony g³ównej, który bêdzie bazowym adresem URL podawanym przez u¿ytkownika w celu uzyskania dostêpu do aplikacji. Nadajemy wygl¹d naszej stronie g³ównie poprzez dodanie funkcji widoku i utworzenie potrzebnych szablonów w celu spe³nienia oczekiwaæ u¿ytkownika.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ wyœwietlenia strony g³ównej naszej aplikacji. 
+
+\subsection{Backlog Item 7}
+\paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy.
+\paragraph{Opis zadania.} Utworzenie strony internetowej poprzez zdefiniowanie jej adresu URL, która nada u¿ytkownikowi mo¿liwoœæ wgl¹du w tematy oraz poszczególne wpisy w tematach, a tak¿e poinformuje o braku tematów lub wpisów w poszczególnych tematach.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ wyœwietlania tematów oraz powi¹zanych z nimi wpisów.
+
+\subsection{Backlog Item 8}
+\paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów. 
+\paragraph{Opis zadania.} Zmodyfikowanie szablonu tematów tak, aby ka¿de ³¹cze tematu prowadzi³o na odpowiedni¹ stronê w celu przejrzystego przegl¹dania tematów przez u¿ytkownika. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Mo¿liwoœæ przegl¹dania tematów na oddzielnych stronach. 
+
+\subsection{Backlog Item 9}
+\paragraph{Tytu³ zadania.} Dodawanie nowych tematów.
+\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi na dodawanie nowych tematów.
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.}  Mo¿liwoœæ dodawania nowych tematów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 10}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu.  
+\paragraph{Opis zadania.} Konieczne jest przeniesienie u¿ytkownika z powrotem na stronê z tematami. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po dodaniu nowego tematu na stronê z tematami. 
+
+\subsection{Backlog Item 11}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat.  
+\paragraph{Opis zadania.} Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk dodaj¹cy nowy temat. 
+
+\subsection{Backlog Item 12}
+\paragraph{Tytu³ zadania.} Dodawanie nowych wpisów.  
+\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi na dodawanie nowych wpisów do 
+tematów. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ dodawania nowych wpisów do tematów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 13}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu.  
+\paragraph{Opis zadania.} Po umieszczeniu nowego wpisu u¿ytkownik powinien zobaczyæ wpis na liœcie wszystkich wpisów dla tematu. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po dodaniu nowego wpisu na stronê tematu, do którego zosta³ dodany wpis. 
+
+\subsection{Backlog Item 14}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis.  
+\paragraph{Opis zadania.} Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk dodaj¹cy nowy wpis. 
+
+\subsection{Backlog Item 15}
+\paragraph{Tytu³ zadania.} Edycja wpisów.  
+\paragraph{Opis zadania.} Przygotujemy stronê pozwalaj¹c¹ u¿ytkownikom na edytowanie istniej¹cych wpisów. Nakazujemy Django utworzenie formularza wype³nionego informacjami 
+pochodz¹cymi z istniej¹cego wpisu. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ edycji istniej¹cych wpisów przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 16}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu.  
+\paragraph{Opis zadania.} Po edycji istniej¹cego wpisu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê zmodyfikowanego wpisu.  
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po edycji wpisu na stronê tematu, w którym zosta³ zmodyfikowany wpis. 
+
+\subsection{Backlog Item 17}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie.  
+\paragraph{Opis zadania.} Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk zapisuj¹cy zmiany dokonane we wpisie. 
+
+\subsection{Backlog Item 18}
+\paragraph{Tytu³ zadania.} Strona logowania u¿ytkownika.  
+\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi na zalogowanie siê do naszej aplikacji internetowej. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ zalogowania siê na swoje konto przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 19}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie logowania.  
+\paragraph{Opis zadania.} Po zakoñczonym sukcesem logowaniu u¿ytkownik kierowany jest z powrotem na stronê g³ówn¹. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po udanym logowaniu na stronê g³ówn¹ aplikacji. 
+
+\subsection{Backlog Item 20}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz logowania.  
+\paragraph{Opis zadania.} Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk wysy³aj¹cy formularz logowania. 
+
+\subsection{Backlog Item 21}
+\paragraph{Tytu³ zadania.} Wylogowanie siê z aplikacji.  
+\paragraph{Opis zadania.} Nie bêdziemy tworzyæ oddzielnej strony do obs³ugi wylogowania. Kiedy u¿ytkownik kliknie ³¹cze, zostanie przeniesiony z powrotem na stronê g³ówn¹. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ wylogowania siê z aplikacji przez wszystkich u¿ytkowników. 
+
+\subsection{Backlog Item 22}
+\paragraph{Tytu³ zadania.} Strona rejestracji u¿ytkownika.  
+\paragraph{Opis zadania.} U¿ycie oferowanych przez Django narzêdzi do budowania formularzy, aby przygotowaæ stronê pozwalaj¹c¹ ka¿demu u¿ytkownikowi zarejestrowaæ siê w naszej aplikacji internetowej. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Mo¿liwoœæ zarejestrowania w³asnego konta u¿ytkownika. 
+
+\subsection{Backlog Item 23}
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie rejestracji.  
+\paragraph{Opis zadania.} Po rejestracji u¿ytkownik kierowany jest z powrotem na stronê g³ówn¹, na której spersonalizowane powitanie informuje o zakoñczonej sukcesem rejestracji. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Przekierowanie u¿ytkownika po rejestracji na stronê g³ówn¹ aplikacji. 
+
+\subsection{Backlog Item 24}
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz rejestracji.  
+\paragraph{Opis zadania.} Django nie tworzy przycisku wysy³aj¹cego formularz, wiêc definiujemy go sami. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk wysy³aj¹cy formularz rejestracji. 
+
+\subsection{Backlog Item 25}
+\paragraph{Tytu³ zadania.} Umo¿liwienie u¿ytkownikom bycia w³aœcicielami swoich danych.  
+\paragraph{Opis zadania.} Ograniczymy dostêp do wybranych stron, aby u¿ytkownik móg³ pracowaæ jedynie z w³asnymi danymi. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} U¿ytkownicy mog¹ widzieæ jedynie w³asne dane. 
+
+\subsection{Backlog Item 26}
+\paragraph{Tytu³ zadania.} Zdefiniowanie interaktywnego paska nawigacji.  
+\paragraph{Opis zadania.} Na pasku definiujemy zestaw ³¹czy umo¿liwiaj¹cych u¿ytkownikom poruszanie siê po aplikacji. Razem z paskiem nawigacji zdefiniujemy przycisk, 
+który bêdzie wyœwietlany, gdy okno przegl¹darki bêdzie mia³o zbyt ma³¹ szerokoœæ, 
+aby wyœwietliæ poziomo ca³y pasek nawigacji. Kiedy przycisk ten zostanie klikniêty przez u¿ytkownika, elementy nawigacyjne pojawi¹ siê na rozwijanej liœcie. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Przycisk zwijaj¹cy pasek nawigacji, gdy u¿ytkownik zmniejszy okno przegl¹darki lub 
+gdy wyœwietli nasz¹ aplikacjê internetow¹ na urz¹dzeniu mobilnym wyposa¿onym w ma³y ekran. 
+
+\subsection{Backlog Item 27}
+\paragraph{Tytu³ zadania.} Nadanie stylu stronie g³ównej.  
+\paragraph{Opis zadania.} Na stronie g³ównej aplikacji umieszczamy krótki slogan, aby u¿ytkownik korzystaj¹cy z aplikacji po raz pierwszy domyœli³ siê 
+od razu, jakie jest jej przeznaczenie. Zachêcamy potencjalnych u¿ytkowników do utworzenia konta oraz przedstawiamy dwie najwa¿niejsze akcje - dodawanie 
+nowych tematów i wpisów. Wygl¹d i uk³ad strony g³ównej dostosowuje siê automatycznie do rozmiaru okna przegl¹darki, na której jest wyœwietlana aplikacja. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Atrakcyjnoœæ i responsywnoœæ strony g³ównej aplikacji. 
+
+\subsection{Backlog Item 28}
+\paragraph{Tytu³ zadania.} Nadanie stylów stronom logowania i rejestracji.  
+\paragraph{Opis zadania.} Wprowadzamy zmiany w formularzach logowania i rejestracji, aby zapewniæ im spójny wygl¹d z pozosta³ymi stronami. Strony logowania 
+i rejestracji stan¹ siê bardziej przejrzyste i czytelne (od razu wiadomo do czego s³u¿¹). 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Atrakcyjnoœæ i responsywnoœæ stron logowania i rejestracji. 
+
+\subsection{Backlog Item 29}
+\paragraph{Tytu³ zadania.} Nadanie stylu stronie tematów.  
+\paragraph{Opis zadania.} Nadajemy stronie tematów odpowiedni styl. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Atrakcyjnoœæ i responsywnoœæ strony tematów. 
+
+\subsection{Backlog Item 30}
+\paragraph{Tytu³ zadania.} Nadanie stylów wpisom na stronie tematu.  
+\paragraph{Opis zadania.} Nadajemy wpisom na stronie tematu odpowiedni styl. 
+\paragraph{Priorytet.} Œredni.
+\paragraph{Definition of Done.} Atrakcyjnoœæ i responsywnoœæ wpisów na stronie tematu. 
+
+\subsection{Backlog Item 31}
+\paragraph{Tytu³ zadania.} Wdro¿enie aplikacji "Memorize!".  
+\paragraph{Opis zadania.} Wdra¿amy projekt na serwerze WWW, aby ka¿dy, kto ma po³¹czenie z internetem móg³ skorzystaæ z naszej aplikacji. 
+\paragraph{Priorytet.} Wysoki.
+\paragraph{Definition of Done.} Dzia³aj¹ca online aplikacja "Memorize!". 
+
+\section{Sprint 1}
+\subsection{Cel} Do opracowania projektu o nazwie "Memorize!" wykorzystamy framework Django. 
+Zaczniemy od przygotowania œrodowiska dla projektu, a nastêpnie zdefiniujemy 
+klasy dla danych, z którymi bêdzie dzia³a³a aplikacja. 
+Witrynê administracyjn¹ Django wykorzystamy do wstawienia pewnych danych 
+pocz¹tkowych, a nastêpnie przejdziemy do tworzenia widoków i szablonów, 
+za pomoc¹ których Django bêdzie budowaæ strukturê naszej aplikacji internetowej. 
+Utworzymy intuicyjne, przyjazne u¿ytkownikom strony pozwalaj¹ce im na dodawanie nowych tematów oraz wpisów, a tak¿e na edycjê 
+istniej¹cych wpisów. 
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytu³ zadania.} Instalacja i konfiguracja Django.
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie bazy danych.
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Ograniczenie d³ugoœci wyœwietlanych wpisów na stronie tematu.
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie strony g³ównej naszej aplikacji internetowej.
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy. 
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów.
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Dodawanie nowych tematów.
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu.
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat.
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Dodawanie nowych wpisów.
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu.
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis.
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Edycja wpisów.
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu.
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie.
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytu³ zadania.} Instalacja i konfiguracja Django.
+\subparagraph{Wykonawca.} Zespó³ deweloperski.
+\subparagraph{Realizacja.} Wykonujemy polecenie instalacyjne frameworka Django na swoich systemach operacyjnych. 
+Kolejnymi poleceniami nakazujemy Django utworzyæ nowy projekt o nazwie memorize, a nastêpnie strukturê katalogów u³atwiaj¹c¹ wdro¿enie aplikacji na serwerze, gdy zakoñczymy 
+ju¿ nad ni¹ pracê. Czasoch³onnoœæ tego zadania by³a przesadzona. Ostateczna estymata mierzona w koszulkach wynios³a "M". 
+
+\paragraph{Tytu³ zadania.} Utworzenie bazy danych.
+\subparagraph{Wykonawca.} Zespó³ deweloperski.
+\subparagraph{Realizacja.} Wydajemy po raz pierwszy polecenie nakazuj¹ce Django sprawdziæ, czy baza danych odpowiada bie¿¹cemu stanowi projektu. 
+W wyniku tego polecenia Django utworzy now¹ bazê danych zawieraj¹c¹ tabele niezbêdne do przechowywania informacji, których bêdziemy u¿ywaæ w projekcie. 
+Upewniamy siê, ¿e Django utworzy³ plik o nazwie db.sqlite3. 
+Faktyczny czas spêdzony nad ukoñczeniem tego zadania pokrywa siê z przyjêt¹ wczeœniej estymat¹ "S".
+
+\paragraph{Tytu³ zadania.} Zdefiniowanie odpowiednich klas.
+\subparagraph{Wykonawca.} Damian Hada³a, Krzysztof Radoñ.
+\subparagraph{Realizacja.} Utworzyliœmy klasê o nazwie Topic. W tej klasie mamy dwa atrybuty: text i date\_added. Atrybut text jest typu CharField, co oznacza dane sk³adaj¹ce siê ze 
+znaków, czyli po prostu tekst. Podczas definiowania atrybutu typu CharField konieczne jest poinformowanie Django, jaka iloœæ miejsca na te informacje powinna byæ 
+zarezerwowana w bazie danych. Podajemy wielkoœæ 200 znaków (max\_length=200), która powinna byæ wystarczaj¹ca dla praktycznie wszystkich tytu³ów. 
+Atrybut date\_added jest typu DateTimeField, czyli przechowuje informacje o dacie i godzinie. Przekazujemy argument auto\_add\_now=True, który nakazuje Django automatyczne przypisywanie temu atrybutowi bie¿¹cej daty i godziny w chwili tworzenia nowego tematu przez u¿ytkownika. 
+Utworzyliœmy klasê o nazwie Entry. Pierwszy atrybut (topic) to egzemplarz ForeignKey, czyli klucz zewnêtrzny - ³¹czy ka¿dy wpis z okreœlonym tematem. 
+Nastêpny atrybut nosi nazwê text i jest egzemplarzem TextField. Nie narzucamy mu ¿adnych ograniczeñ dotycz¹cych wielkoœci, poniewa¿ nie chcemy ograniczaæ d³ugoœci poszczególnych 
+wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu.   
+
+\paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
+\subparagraph{Wykonawca.} Krzysztof Jamro.
+\subparagraph{Realizacja.} Wyda³em Django polecenie utworzenia konta super - u¿ytkownika: createsuperuser i nada³em mu nazwê mm\_admin. 
+Ustawi³em te¿ przygotowane wczeœniej z w³aœcicielem produktu has³o do konta super - u¿ytkownika. Modyfikujê utworzony przez framework Django plik o nazwie admin.py 
+rejestruj¹c klasê Topic. Dziêki temu uzyskujemy mo¿liwoœæ dodawania nowych tematów przez witrynê administracyjn¹. 
+
+\paragraph{Tytu³ zadania.} Ograniczenie d³ugoœci wyœwietlanych wpisów na stronie tematu.
+\subparagraph{Wykonawca.} Dawid Su³owicz.
+\subparagraph{Realizacja.} Na koñcu klasy Entry umieszczam metodê \_\_str\_\_(), która wskazuje jakie informacje maj¹ zostaæ wyœwietlone podczas odwo³ywania siê do poszczególnych wpisów. Ca³y wpis nie mo¿e byæ w postaci d³ugiego tekstu wiêc wyœwietlam jedynie pierwszych 50 znaków przechowywanych w atrybucie text. 
+Do³¹czam równie¿ wielokropek, aby tym wyraŸnie wskazaæ, ¿e nie zosta³ wyœwietlony pe³ny wpis. 
+
+\paragraph{Tytu³ zadania.} Utworzenie strony g³ównej naszej aplikacji internetowej.
+\subparagraph{Wykonawca.} Damian Hada³a. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy.
+\subparagraph{Wykonawca.} Krzysztof Jamro, Krzysztof Radoñ. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów. 
+\subparagraph{Wykonawca.} Krzysztof Jamro.
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Dodawanie nowych tematów. 
+\subparagraph{Wykonawca.} Zespó³ deweloperski. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
+\subparagraph{Wykonawca.} Krzysztof Jamro. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat. 
+\subparagraph{Wykonawca.} Dawid Su³owicz. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Dodawanie nowych wpisów. 
+\subparagraph{Wykonawca.} Zespó³ deweloperski. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu. 
+\subparagraph{Wykonawca.} Damian Hada³a. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis. 
+\subparagraph{Wykonawca.} Dawid Su³owicz. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Edycja wpisów. 
+\subparagraph{Wykonawca.} Zespó³ deweloperski. 
+\subparagraph{Realizacja.} 
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu. 
+\subparagraph{Wykonawca.} Krzysztof Radoñ. 
+\subparagraph{Realizacja.}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie. 
+\subparagraph{Wykonawca.} Dawid Su³owicz. 
+\subparagraph{Realizacja.}
+
+\subsection{Sprint Review/Demo}
+<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
+
+\section{Sprint 2}
+
+\subsection{Cel} Zajmiemy siê budowaniem systemu rejestracji kont u¿ytkowników oraz ich autoryzacji, który pozwoli u¿ytkownikom na tworzenie kont i 
+wykorzystywanie naszej aplikacji internetowej. Umo¿liwimy ka¿demu u¿ytkownikowi znajduj¹cemu siê w dowolnym miejscu na œwiecie 
+przeprowadzenie operacji rejestracji konta w aplikacji "Memorize!" i rozpoczêcie korzystania z niej. Nastêpnie przyst¹pimy do 
+implementacji systemu uwierzytelniania u¿ytkownika. Zbudujemy stronê rejestracji, która umo¿liwi u¿ytkownikom za³o¿enie konta,  
+oraz ograniczy dostêp do wybranych stron, które bêd¹ mogli wyœwietliæ tylko zalogowani u¿ytkownicy. Zmodyfikujemy niektóre 
+funkcje widoku, aby u¿ytkownicy mogli widzieæ jedynie w³asne dane. 
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytu³ zadania.} Strona logowania u¿ytkownika. 
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie logowania. 
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz logowania. 
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Wylogowanie siê z aplikacji. 
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Strona rejestracji u¿ytkownika. 
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie rejestracji. 
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz rejestracji. 
+\begin{itemize}
+\item Estymata: "S".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Umo¿liwienie u¿ytkownikom bycia w³aœcicielami swoich danych. 
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\paragraph{<<Tutaj dodawaæ kolejne zadania>>}
+
+
+\subsection{Sprint Review/Demo}
+<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
+
+\section{Sprint 3}
+
+\subsection{Cel} Nadamy styl aplikacji "Memorize!", aby prezentowa³a sie profesjonalnie na wszystkich nowoczesnych urz¹dzeniach,  pocz¹wszy od tych pod³¹czonych do ogromych p³askich monitorów a¿ po smartfony. 
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytu³ zadania.} Zdefiniowanie interaktywnego paska nawigacji. 
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Nadanie stylu stronie g³ównej. 
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Nadanie stylów stronom logowania i rejestracji. 
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Nadanie stylu stronie tematów. 
+\begin{itemize}
+\item Estymata: "M".
+\end{itemize}
+
+\paragraph{Tytu³ zadania.} Nadanie stylów wpisom na stronie tematu. 
+\begin{itemize}
+\item Estymata: "L".
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\paragraph{<<Tutaj dodawaæ kolejne zadania>>}
+
+
+\subsection{Sprint Review/Demo}
+<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
+
+
+\section{Sprint 4}
+
+\subsection{Cel} Wdro¿ymy projekt na serwerze, aby ka¿dy, kto ma dostêp do internetu móg³ zarejestrowaæ siê i utworzyæ konto w aplikacji. 
+
+\subsection{Sprint Planning/Backlog}
+
+\paragraph{Tytu³ zadania.} Wdro¿enie aplikacji "Memorize!". 
+\begin{itemize}
+\item Estymata: "XL".
+\end{itemize}
+
+\subsection{Realizacja}
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\paragraph{Tytu³ zadania.} <<Tytu³>>.
+\subparagraph{Wykonawca.} <<Wykonawca>>.
+\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
+for (i=1; i<10; i++)
+...
+\end{verbatim}>>.
+
+\begin{thebibliography}{9}
+
+\bibitem{Cov} S. R. Covey, {\em 7 nawyków skutecznego dzia³ania}, Rebis, Poznañ, 2007.
+
+\bibitem{Oet} Tobias Oetiker i wsp., Nie za krótkie wprowadzenie do systemu \LaTeX  \ $2_\varepsilon$, \url{ftp://ftp.gust.org.pl/TeX/info/lshort/polish/lshort2e.pdf}
+
+\bibitem{SchSut} K. Schwaber, J. Sutherland, {\em Scrum Guide}, \url{http://www.scrumguides.org/}, 2016.
+
+\bibitem{apr} \url{https://docs.python.org/3.5/}
+
+\bibitem{us} \url{https://docs.djangoproject.com/pl/1.11/}
+
+\end{thebibliography}
+
+\end{document}
+
+% ----------------------------------------------------------------
