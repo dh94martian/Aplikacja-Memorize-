@@ -498,7 +498,31 @@ Do³¹czam równie¿ wielokropek, aby tym wyraŸnie wskazaæ, ¿e nie zosta³ wyœwietlon
 
 \paragraph{Tytu³ zadania.} Utworzenie strony g³ównej naszej aplikacji internetowej.
 \subparagraph{Wykonawca.} Damian Hada³a. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Moim zadaniem jest zdefiniowanie adresu URL dla strony g³ównej, utworzenie jej funkcji widoku oraz stworzenie prostego szablonu. 
+Obecnie bazowy adres URL prowadzi strony domyœlnej Django informuj¹cej o prawid³owym dzia³aniu projektu. Zmieniam to mapuj¹c ten bazowy adres URL na stronê g³ówn¹ aplikacji "Memorize!":
+\begin{verbatim}
+"""Wzorce adresów URL dla memorizeapp"""
+
+from django.conf.urls import url
+
+from . import views
+
+urlpatterns = [
+    #Strona g³ówna
+    url(r'^$', views.index, name='index'),
+]
+\end{verbatim} 
+Nastêpnie tworzê widok dla strony g³ównej naszej aplikacji:
+\begin{verbatim}
+def index(request):
+    """Strona g³ówna dla aplikacji Memorize!"""
+return render(request, 'memorizeapp/index.html')
+\end{verbatim} 
+Kiedy adres URL ¿¹dania zostanie dopasowany do wzorca, Django bêdzie szukaæ w pliku views.py funkcji o nazwie index(). Funkcji tej zostanie przekazany obiekt 
+request. Funkcja render(), któr¹ tutaj u¿y³em ma dwa argumenty: pierwotny obiekt request i szablon, który bêdzie wykorzystywany do wyœwietlania strony g³ównej. 
+Przystêpujê teraz do utworzenia szablonu. Tworzê plik index.html, a nastêpnie zamieszczam w nim dwa akapity: pierwszy jest rodzajem tytu³u, natomiast drugi wyjaœnia 
+u¿ytkownikowi przeznaczenie naszej aplikacji. Teraz po wykonaniu ¿¹dania do bazowego adresu URL projektu, zamiast strony domyœlnie generowanej przez Django wyœwietli siê 
+szablon, który w³aœnie zbudowa³em.
 
 \paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy.
 \subparagraph{Wykonawca.} Krzysztof Jamro, Krzysztof Radoñ. 
