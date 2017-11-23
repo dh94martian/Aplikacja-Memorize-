@@ -7,4 +7,7 @@ from . import views
 urlpatterns = [
     #Strona główna
     url(r'^$', views.index, name='index'),
+    
+    #Wyswietlenie wszystkich tematów
+    url(r'^topics/$', views.topics, name='topics'),
 ]
