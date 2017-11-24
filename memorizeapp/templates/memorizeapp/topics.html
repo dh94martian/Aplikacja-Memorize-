@@ -7,7 +7,6 @@
   <ul>
     {% for topic in topics %}
       <li><a href="{% url 'memorizeapp:topic' topic.id %}">{{ topic }}</a></li>
-      <li>{{ topic }}</li>
     {% empty %}
       <li>Nie został jeszcze dodany żaden temat.</li>
     {% endfor %}
