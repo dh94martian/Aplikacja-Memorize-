@@ -34,6 +34,7 @@ def new_topic(request):
         form = TopicForm(request.POST)
         if form.is_valid():
             form.save()
+            return HttpResponseRedirect(reverse('memorizeapp:topics'))
 
     context = {'form': form}
     return render(request, 'memorizeapp/new_topic.html', context)
