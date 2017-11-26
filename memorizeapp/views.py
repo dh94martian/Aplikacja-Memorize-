@@ -69,6 +69,7 @@ def edit_entry(request, entry_id):
         form = EntryForm(instance=entry, data=request.POST)
         if form.is_valid():
             form.save()
+            return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic.id]))
 
     context = {'entry': entry, 'topic': topic, 'form': form}
     return render(request, 'memorizeapp/edit_entry.html', context)
