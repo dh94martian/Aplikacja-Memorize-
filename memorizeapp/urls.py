@@ -16,4 +16,7 @@ urlpatterns = [
 
     #Strona przeznaczona do dodawania nowego tematu
     url(r'^new_topic/$', views.new_topic, name='new_topic'),
+    
+    #Testowanie przekierowania z utworzonego wpisu do listy tematów
+    url(r'^topics/test_topic/', views.test_topic, name='test_topic'),
 ]
