@@ -1,0 +1,10 @@
+{% extends "memorizeapp/base.html" %}
+
+{% block content %}
+  <p><a href="{% url 'memorizeapp:topic' topic.id %}">{{ topic }}</a></p>
+  <p>Dodaj nowy wpis:</p>
+  <form action="{% url 'memorizeapp:new_entry' topic.id %}" method='post'>
+    {% csrf_token %}
+    {{ form.as_p }}
+  </form>
+{% endblock content %}
