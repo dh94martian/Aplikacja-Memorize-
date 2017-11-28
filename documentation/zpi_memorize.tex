@@ -525,8 +525,23 @@ u¿ytkownikowi przeznaczenie naszej aplikacji. Teraz po wykonaniu ¿¹dania do bazo
 szablon, który w³aœnie zbudowa³em.
 
 \paragraph{Tytu³ zadania.} Utworzenie stron wyœwietlaj¹cych tematy i zawarte w nich wpisy.
-\subparagraph{Wykonawca.} Krzysztof Jamro, Krzysztof Radoñ. 
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Krzysztof Jamro, Krzysztof Radoñ, Damian Hada³a. 
+\subparagraph{Realizacja.} Rozpoczynamy od utworzenia szablonu bazowego o nazwie base.html, który bêdzie zawiera³ elementy stosowane na wszystkich stronach, 
+a pozosta³e szablony bêd¹ dziedziczy³y po tym szablonie. Na pocz¹tek umieszczamy w nim w nim tytu³ i ³¹cze prowadz¹ce do strony g³ównej aplikacji. 
+Od teraz wszystkie strony naszej aplikacji bêd¹ mia³y ³¹cze prowadz¹ce na stronê g³ówn¹. Nastêpnie modyfikujemy plik szablonu index.html w taki sposób, aby dziedziczy³ 
+po base.html. Wszystko to, co nie jest dziedziczone po szablonie nadrzêdnym zostaje umieszczone wewn¹trz bloku content. My umieszczamy tam akapit opisuj¹cy aplikacjê 
+"Memorize!". Przygotujemy teraz nastêpuj¹ce strony: pierwsza z nich to ogólna strona tematów, natomiast druga pos³u¿y do wyœwietlania wpisów dla pojedynczego tematu. 
+Definiujemy najpierw adres URL dla strony tematów. Powszechn¹ praktyk¹ jest wybieranie takiego adresu URL, ¿eby odzwierciedla³ rodzaj informacji przedstawianych na danej 
+stronie. My wykorzystaliœmy s³owo topics. Po wpisaniu w przegl¹darce adresu w postaci /topics/ przejdziemy na stronê z tematami. Teraz przygotowujemy zapytanie do bazy danych: interesuj¹ nas obiekty Topic posortowane wed³ug daty dodania. Przechowujemy ten zbiór w zmiennej topics. 
+Tworzymy teraz szablon tematów o nazwie topics.html i w nim wykorzystamy dane dostarczone przez funkcjê widoku topics(). 
+Dziedziczymy po szablonie bazowym i rozpoczynamy wype³nianie bloku content. Na tej stronie znajdzie siê wypunktowana lista wszystkich tematów. 
+Pokazujemy te¿ Django co ma zrobiæ, jeœli lista tematów nie bêdzie zawiera³a ¿adnych elementów. Zostanie wyœwietlony komunikat o tym, ¿e 
+u¿ytkownik nie doda³ jeszcze ¿adnego tematu. Modyfikujemy teraz szablon bazowy w taki sposób, aby zawiera³ ³¹cze do strony wyœwietlaj¹cej tematy. 
+Nastêpnie naszym zadaniem jest utworzenie strony, która ma wyœwietliæ nazwê tematu oraz wszystkie powi¹zane z nim wpisy. 
+We wzorcu adresu URL wykorzystujemy atrybut id w celu wskazania ¿¹danego tematu. Tworzymy funkcjê widoku topic(), która pobierze z bazy danych temat oraz wszystkie powi¹zane 
+z nim wpisy i wyœwietli je w kolejnoœci od najnowszego. Przedostatnim zadaniem, które realizujemy jest utworzenie kolejnego szablonu, tym razem dla strony tematu, który powinien wyœwietlaæ nazwê tematu oraz powi¹zane z nim wpisy. Wyœwietlamy wszystkie wpisy za pomoc¹ wypunktowanej listy. Ka¿dy dodany wpis zawiera znacznik czasu w formacie 
+1 sty 2017 19:00. Jeœli do danego tematu nie zosta³ dodany ¿aden wpis, to u¿ytkownik zostanie o tym poinformowany. 
+Ostateczna estymata nie wynios³a "L", tak jak to by³o zaplanowane, tylko "XL" co znacznie wyd³u¿y³o pracê nad zadaniem. 
 
 \paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów. 
 \subparagraph{Wykonawca.} Krzysztof Jamro.
