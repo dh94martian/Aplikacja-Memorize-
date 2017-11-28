@@ -545,14 +545,17 @@ Ostateczna estymata nie wynios³a "L", tak jak to by³o zaplanowane, tylko "XL" co
 
 \paragraph{Tytu³ zadania.} Utworzenie ³¹cza ze strony tematów. 
 \subparagraph{Wykonawca.} Krzysztof Jamro.
-\subparagraph{Realizacja.} Aby móc wyœwietliæ stronê danego tematu w przegl¹darce modyfikujê szablon tematów topics.html tak, aby ka¿de ³¹cze tematu prowadzi³o na odpowiedni¹ stronê. Od teraz ka¿dy temat na liœcie jest ³¹czem, którego klikniêcie powoduje przejœcie na odpowiedni¹ stronê. Zadanie zosta³o wykonane wczeœniej, ni¿ przypuszcza³em. Koñcowa estymata tego zadania wynios³a "M". 
+\subparagraph{Realizacja.} Aby móc wyœwietliæ stronê danego tematu w przegl¹darce modyfikujê szablon tematów topics.html tak, aby ka¿de ³¹cze tematu prowadzi³o na odpowiedni¹ stronê. Od teraz ka¿dy temat na liœcie jest ³¹czem, którego klikniêcie powoduje przejœcie na odpowiedni¹ stronê. Zadanie zosta³o wykonane wczeœniej, ni¿ przypuszcza³em. Koñcowa estymata tego zadania wynios³a "S". 
 
 \paragraph{Tytu³ zadania.} Dodawanie nowych tematów. 
 \subparagraph{Wykonawca.} Zespó³ deweloperski. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Tworzymy formularz dodawania nowego tematu i umieszczamy go w pliku forms.py, który znajduje siê w katalogu memorizeapp. 
+Definiujemy klasê o nazwie TopicForm. Budujemy ten formularz na podstawie klasy Topic i uwzglêdniamy jedynie kolumny text. Ustalamy adres URL dla strony 
+new\_topic. Powinien byæ krótki i jasny. Kiedy u¿ytkownik bêdzie chcia³ dodaæ nowy temat zostanie przekierowany na stronê/new\_topic/. Nastêpnie tworzymy funkcjê widoku 
+new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿ytkownika w formularzu. 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
-\subparagraph{Wykonawca.} Krzysztof Jamro. 
+\subparagraph{Wykonawca.} Dawid Su³owicz. 
 \subparagraph{Realizacja.} 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat. 
