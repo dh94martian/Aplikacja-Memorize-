@@ -557,11 +557,21 @@ new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Importujê klasê HttppResponseRedirect i przy jej pomocy ustalam przekierowanie u¿ytkownika, kiedy ju¿ doda nowy temat, z powrotem 
+na stronê topics: 
+\begin{verbatim}
+from django.http import HttpResponseRedirect
+--ciêcie--
+return HttpResponseRedirect(reverse('memorizeapp:topics'))
+\end{verbatim} 
+Funkcja reverse() okreœla adres URL na podstawie wzorca adresu, co znaczy, ¿e Django wygeneruje adres URL podczas ¿¹dania strony. 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy temat. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Definiujê przycisk dla szablonu strony o nazwie new\_topic.html, poniewa¿ Django nie tworzy automatycznie przycisku wysy³aj¹cego formularz: 
+\begin{verbatim}
+<button name="submit">Dodaj temat</button>
+\end{verbatim}
 
 \paragraph{Tytu³ zadania.} Dodawanie nowych wpisów. 
 \subparagraph{Wykonawca.} Zespó³ deweloperski. 
@@ -579,7 +589,10 @@ stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów.
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Tak, jak w przypadku szablonu new\_topic.html tworzê przycisk wysy³aj¹cy formularz dla strony dodawania nowych wpisów new\_entry.html: 
+\begin{verbatim}
+<button name='submit'>Dodaj wpis</button>
+\end{verbatim}
 
 \paragraph{Tytu³ zadania.} Edycja wpisów. 
 \subparagraph{Wykonawca.} Zespó³ deweloperski. 
