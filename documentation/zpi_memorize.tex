@@ -483,7 +483,8 @@ zarezerwowana w bazie danych. Podajemy wielkoœæ 200 znaków (max\_length=200), kt
 Atrybut date\_added jest typu DateTimeField, czyli przechowuje informacje o dacie i godzinie. Przekazujemy argument auto\_add\_now=True, który nakazuje Django automatyczne przypisywanie temu atrybutowi bie¿¹cej daty i godziny w chwili tworzenia nowego tematu przez u¿ytkownika. 
 Utworzyliœmy klasê o nazwie Entry. Pierwszy atrybut (topic) to egzemplarz ForeignKey, czyli klucz zewnêtrzny - ³¹czy ka¿dy wpis z okreœlonym tematem. 
 Nastêpny atrybut nosi nazwê text i jest egzemplarzem TextField. Nie narzucamy mu ¿adnych ograniczeñ dotycz¹cych wielkoœci, poniewa¿ nie chcemy ograniczaæ d³ugoœci poszczególnych 
-wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu.   
+wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu. Czas, jaki poœwiêciliœmy na realizacjê tego 
+zadania œmia³o mo¿na zamkn¹æ we wczeœniej ustalonym rozmiarze  "XL". 
 
 \paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
 \subparagraph{Wykonawca.} Dawid Su³owicz.
@@ -554,7 +555,6 @@ Definiujemy klasê o nazwie TopicForm. Budujemy ten formularz na podstawie klasy 
 new\_topic. Powinien byæ krótki i jasny. Kiedy u¿ytkownik bêdzie chcia³ dodaæ nowy temat zostanie przekierowany na stronê/new\_topic/. Nastêpnie tworzymy funkcjê widoku 
 new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿ytkownika w formularzu. Na koniec tworzymy szablon  o nazwie new\_topic.html przeznaczony do wyœwietlenia zbudowanego przez nas formularza oraz ³¹cze prowadz¹ce na stronê new\_topic. To zadanie nie okaza³o siê a¿ tak czasoch³onne. Koñcowa estymata wynios³a "L".
 
-
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
 \subparagraph{Realizacja.} Importujê klasê HttppResponseRedirect i przy jej pomocy ustalam przekierowanie u¿ytkownika, kiedy ju¿ doda nowy temat, z powrotem 
@@ -583,11 +583,18 @@ W adresie URL przeznaczonym do dodawania nowego wpisu umieszczamy argument topic
 Tworzymy now¹ funkcjê widoku o nazwie new\_entry() odpowiedzialn¹ za obs³ugê dodawania nowych wpisów. Dziêki niej wpis zostanie zapisany w bazie danych wraz 
 z przypisanym mu tematem. Tworzymy szablon dla strony new\_entry, który jest bardzo podobny do utworzonego przez nas wczeœniej szablonu new\_topic. 
 Temat jest wyœwietlany na pocz¹tku strony, aby u¿ytkownik nie mia³ ¿adnych w¹tpliwoœci, do jakiego tematu dodaje nowy wpis. Na samym koñcu dodajemy ³¹cze prowadz¹ce na 
-stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów. 
+stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów. To zadanie wczeœniej oszacowaliœmy na czasoch³onnoœæ równ¹ rozmiarowi "XL", co jednak okaza³o siê 
+przeszacowaniem. Rzeczywisty czas realizacji tego zadania zamyka siê w estymacie równej "L". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu. 
-\subparagraph{Wykonawca.} Damian Hada³a. 
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Krzysztof Radoñ. 
+\subparagraph{Realizacja.} Przygotowujê przekierowanie u¿ytkownika na stronê tematu, do którego zosta³ dodany nowy wpis. Na tej stronie u¿ytkownik powinien zobaczyæ nowy 
+wpis na liœcie wszystkich wpisów dla danego tematu: 
+\begin{verbatim}
+return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic_id]))
+\end{verbatim}
+Wywo³anie reverse() wymaga dwóch argumentów. Pierwszy to nazwa wzorca adresu URL, na podstawie którego zostaje gnenerowany adres URL. Drugi to lista args 
+zawieraj¹ca wszystkie argumenty, które musz¹ byæ umieszczone w adresie URL. Estymata tego zadania okaza³a siê byæ mniejsza, ni¿ zak³adaliœmy. Ostatecznie jest to rozmiar "S". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
@@ -604,12 +611,16 @@ edycji wpisu. Wymaga on przekazania identyfikatora wpisu, który chcemy edytowaæ.
 przeznaczony do edycji wpisu. Po otrzymaniu ¿¹dania, które bêdzie zawieraæ zmodyfikowany tekst wpisu, funkcja edit\_entry() zapisze ten tekst w bazie danych. 
 Po utworzeniu funkcji widoku przechodzimy do tworzenia szablonu dla strony edycji wpisu. Jest on bardzo podobny do szablonu new\_entry.html. Ostatnim krokiem jest dodanie 
 ³¹cza prowadz¹cego na stronê edycji wpisu i wyœwietlanego przy wszystkich wpisach na stronie tematu. £¹cze pozwalaj¹ce na edycje wpisu umieœciliœmy po dacie i tekœcie 
-danego wpisu. 
+danego wpisu. Zgodnie z wczeœniejszymi szacowaniami to zadanie poch³onê³o s³uszn¹ iloœæ czasu równ¹ estymacie o rozmiarze "XL". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu. 
 \subparagraph{Wykonawca.} Krzysztof Radoñ. 
 \subparagraph{Realizacja.} W funkcji widoku edit\_entry() zamieszczam przekierowanie na stronê tematu przy pomocy zaimportowanej klasy HttpResponseRedirect. 
-Po przekierowaniu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê edytowanego wpisu.
+Po przekierowaniu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê edytowanego wpisu: 
+ \begin{verbatim}
+return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic.id]))
+ \end{verbatim}
+Czasoch³onnoœæ tego zadania okaza³a siê byæ mniejsza, ni¿ szacowaliœmy. Realny czas, który poœwiêci³em na jego realizacjê zamyka siê w rozmiarze "S". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
