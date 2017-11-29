@@ -552,7 +552,8 @@ Ostateczna estymata nie wynios³a "L", tak jak to by³o zaplanowane, tylko "XL" co
 \subparagraph{Realizacja.} Tworzymy formularz dodawania nowego tematu i umieszczamy go w pliku forms.py, który znajduje siê w katalogu memorizeapp. 
 Definiujemy klasê o nazwie TopicForm. Budujemy ten formularz na podstawie klasy Topic i uwzglêdniamy jedynie kolumny text. Ustalamy adres URL dla strony 
 new\_topic. Powinien byæ krótki i jasny. Kiedy u¿ytkownik bêdzie chcia³ dodaæ nowy temat zostanie przekierowany na stronê/new\_topic/. Nastêpnie tworzymy funkcjê widoku 
-new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿ytkownika w formularzu. 
+new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿ytkownika w formularzu. Na koniec tworzymy szablon  o nazwie new\_topic.html przeznaczony do wyœwietlenia zbudowanego przez nas formularza oraz ³¹cze prowadz¹ce na stronê new\_topic. 
+
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
@@ -564,7 +565,13 @@ new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿
 
 \paragraph{Tytu³ zadania.} Dodawanie nowych wpisów. 
 \subparagraph{Wykonawca.} Zespó³ deweloperski. 
-\subparagraph{Realizacja.} 
+\subparagraph{Realizacja.} Tworzymy formularz dodawania nowych wpisów, który bêdzie powi¹zany z klas¹ Entry. Zaczynamy od uaktualnienia polecenia import, 
+aby importowa³o nie tylko klasê Topic, ale równie¿ Entry. Utworzona klasa EntryForm okreœla kolumny przeznaczone do uwzglêdnienia w formularzu. 
+W adresie URL przeznaczonym do dodawania nowego wpisu umieszczamy argument topic\_id, aby ka¿dy wpis by³ powi¹zany z okreœlonym tematem. 
+Tworzymy now¹ funkcjê widoku o nazwie new\_entry() odpowiedzialn¹ za obs³ugê dodawania nowych wpisów. Dziêki niej wpis zostanie zapisany w bazie danych wraz 
+z przypisanym mu tematem. Tworzymy szablon dla strony new\_entry, który jest bardzo podobny do utworzonego przez nas wczeœniej szablonu new\_topic. 
+Temat jest wyœwietlany na pocz¹tku strony, aby u¿ytkownik nie mia³ ¿adnych w¹tpliwoœci, do jakiego tematu dodaje nowy wpis. Na samym koñcu dodajemy ³¹cze prowadz¹ce na 
+stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów. 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu. 
 \subparagraph{Wykonawca.} Damian Hada³a. 
@@ -580,7 +587,8 @@ new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu. 
 \subparagraph{Wykonawca.} Krzysztof Radoñ. 
-\subparagraph{Realizacja.}
+\subparagraph{Realizacja.} W funkcji widoku edit\_entry() zamieszczam przekierowanie na stronê tematu przy pomocy zaimportowanej klasy HttpResponseRedirect. 
+Po przekierowaniu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê edytowanego wpisu.
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
