@@ -2,6 +2,7 @@
 \usepackage{polski}
 \usepackage[cp1250]{inputenc}
 \usepackage{url}
+\usepackage{graphicx}
 
 \title{\vspace{4cm} \bf{Aplikacja "Memorize!"}}
 \author{{\em Damian Hada³a, Dawid Su³owicz, Krzysztof Radoñ, Krzysztof Jamro}}
@@ -483,7 +484,8 @@ zarezerwowana w bazie danych. Podajemy wielkoœæ 200 znaków (max\_length=200), kt
 Atrybut date\_added jest typu DateTimeField, czyli przechowuje informacje o dacie i godzinie. Przekazujemy argument auto\_add\_now=True, który nakazuje Django automatyczne przypisywanie temu atrybutowi bie¿¹cej daty i godziny w chwili tworzenia nowego tematu przez u¿ytkownika. 
 Utworzyliœmy klasê o nazwie Entry. Pierwszy atrybut (topic) to egzemplarz ForeignKey, czyli klucz zewnêtrzny - ³¹czy ka¿dy wpis z okreœlonym tematem. 
 Nastêpny atrybut nosi nazwê text i jest egzemplarzem TextField. Nie narzucamy mu ¿adnych ograniczeñ dotycz¹cych wielkoœci, poniewa¿ nie chcemy ograniczaæ d³ugoœci poszczególnych 
-wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu.   
+wpisów. Atrybut date\_added pozwala wyœwietlaæ wpisy w kolejnoœci ich tworzenia oraz umieszczaæ znacznik czasu obok ka¿dego wpisu. Czas, jaki poœwiêciliœmy na realizacjê tego 
+zadania œmia³o mo¿na zamkn¹æ we wczeœniej ustalonym rozmiarze  "XL". 
 
 \paragraph{Tytu³ zadania.} Utworzenie i konfiguracja konta super - u¿ytkownika.
 \subparagraph{Wykonawca.} Dawid Su³owicz.
@@ -554,7 +556,6 @@ Definiujemy klasê o nazwie TopicForm. Budujemy ten formularz na podstawie klasy 
 new\_topic. Powinien byæ krótki i jasny. Kiedy u¿ytkownik bêdzie chcia³ dodaæ nowy temat zostanie przekierowany na stronê/new\_topic/. Nastêpnie tworzymy funkcjê widoku 
 new\_topic(), która bêdzie siê zajmowaæ przetworzeniem danych wpisanych przez u¿ytkownika w formularzu. Na koniec tworzymy szablon  o nazwie new\_topic.html przeznaczony do wyœwietlenia zbudowanego przez nas formularza oraz ³¹cze prowadz¹ce na stronê new\_topic. To zadanie nie okaza³o siê a¿ tak czasoch³onne. Koñcowa estymata wynios³a "L".
 
-
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania do listy tematów po dodaniu nowego tematu. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
 \subparagraph{Realizacja.} Importujê klasê HttppResponseRedirect i przy jej pomocy ustalam przekierowanie u¿ytkownika, kiedy ju¿ doda nowy temat, z powrotem 
@@ -583,11 +584,18 @@ W adresie URL przeznaczonym do dodawania nowego wpisu umieszczamy argument topic
 Tworzymy now¹ funkcjê widoku o nazwie new\_entry() odpowiedzialn¹ za obs³ugê dodawania nowych wpisów. Dziêki niej wpis zostanie zapisany w bazie danych wraz 
 z przypisanym mu tematem. Tworzymy szablon dla strony new\_entry, który jest bardzo podobny do utworzonego przez nas wczeœniej szablonu new\_topic. 
 Temat jest wyœwietlany na pocz¹tku strony, aby u¿ytkownik nie mia³ ¿adnych w¹tpliwoœci, do jakiego tematu dodaje nowy wpis. Na samym koñcu dodajemy ³¹cze prowadz¹ce na 
-stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów. 
+stronê new\_entry, które bêdzie wyœwietlane na wszystkich stronach tematów. To zadanie wczeœniej oszacowaliœmy na czasoch³onnoœæ równ¹ rozmiarowi "XL", co jednak okaza³o siê 
+przeszacowaniem. Rzeczywisty czas realizacji tego zadania zamyka siê w estymacie równej "L". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po dodaniu nowego wpisu. 
-\subparagraph{Wykonawca.} Damian Hada³a. 
-\subparagraph{Realizacja.} 
+\subparagraph{Wykonawca.} Krzysztof Radoñ. 
+\subparagraph{Realizacja.} Przygotowujê przekierowanie u¿ytkownika na stronê tematu, do którego zosta³ dodany nowy wpis. Na tej stronie u¿ytkownik powinien zobaczyæ nowy 
+wpis na liœcie wszystkich wpisów dla danego tematu: 
+\begin{verbatim}
+return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic_id]))
+\end{verbatim}
+Wywo³anie reverse() wymaga dwóch argumentów. Pierwszy to nazwa wzorca adresu URL, na podstawie którego zostaje gnenerowany adres URL. Drugi to lista args 
+zawieraj¹ca wszystkie argumenty, które musz¹ byæ umieszczone w adresie URL. Estymata tego zadania okaza³a siê byæ mniejsza, ni¿ zak³adaliœmy. Ostatecznie jest to rozmiar "S". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku dodaj¹cego nowy wpis. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
@@ -604,12 +612,16 @@ edycji wpisu. Wymaga on przekazania identyfikatora wpisu, który chcemy edytowaæ.
 przeznaczony do edycji wpisu. Po otrzymaniu ¿¹dania, które bêdzie zawieraæ zmodyfikowany tekst wpisu, funkcja edit\_entry() zapisze ten tekst w bazie danych. 
 Po utworzeniu funkcji widoku przechodzimy do tworzenia szablonu dla strony edycji wpisu. Jest on bardzo podobny do szablonu new\_entry.html. Ostatnim krokiem jest dodanie 
 ³¹cza prowadz¹cego na stronê edycji wpisu i wyœwietlanego przy wszystkich wpisach na stronie tematu. £¹cze pozwalaj¹ce na edycje wpisu umieœciliœmy po dacie i tekœcie 
-danego wpisu. 
+danego wpisu. Zgodnie z wczeœniejszymi szacowaniami to zadanie poch³onê³o s³uszn¹ iloœæ czasu równ¹ estymacie o rozmiarze "XL". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê tematu po udanej operacji edytowania wpisu. 
 \subparagraph{Wykonawca.} Krzysztof Radoñ. 
 \subparagraph{Realizacja.} W funkcji widoku edit\_entry() zamieszczam przekierowanie na stronê tematu przy pomocy zaimportowanej klasy HttpResponseRedirect. 
-Po przekierowaniu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê edytowanego wpisu.
+Po przekierowaniu u¿ytkownik powinien zobaczyæ uaktualnion¹ wersjê edytowanego wpisu: 
+ \begin{verbatim}
+return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic.id]))
+ \end{verbatim}
+Czasoch³onnoœæ tego zadania okaza³a siê byæ mniejsza, ni¿ szacowaliœmy. Realny czas, który poœwiêci³em na jego realizacjê zamyka siê w rozmiarze "S". 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku zatwierdzaj¹cego zmiany w edytowanym wpisie. 
 \subparagraph{Wykonawca.} Dawid Su³owicz. 
@@ -621,7 +633,36 @@ w istniej¹cym wpisie, a nie tworzy nowy wpis:
 Rzeczywista czasoch³onnoœæ tego zadania okaza³a siê potwierdzaæ nasze przypuszczenia. Jej rozmiar mierzony w koszulkach to "S". 
 
 \subsection{Sprint Review/Demo}
-<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
+Pierwszy sprint zosta³ zakoñczony powodzeniem. Wszystkie za³o¿one zadania zosta³y zrealizowane, choæ estymaty niektórych z nich by³y niedok³adnie oszacowane. 
+Zrealizowaliœmy wszystkie zaplanowane na ten sprint Backlog Item'y. Utworzyliœmy surowe, ale funkcjonalne strony pozwalaj¹ce u¿ytkownikom dodawaæ nowe tematy oraz wpisy, a tak¿e edytowaæ istniej¹ce wpisy. Zak³adany przyrost projektu zosta³ osi¹gniêty. Demonstracja uzyskanego przyrostu: 
+\begin{figure}[h]
+\includegraphics[scale=0.6]{images/img1.png}\\
+{Widzimy, ¿e na liœcie nie figuruje jeszcze ¿aden temat.}
+\end{figure}
+\begin{figure}[h]
+\includegraphics[scale=0.6]{images/img2.png}\\
+{Wype³niamy formularz i za pomoc¹ przycisku dodajemy nowy temat.}
+\end{figure}
+\begin{figure}[h]
+\includegraphics[scale=0.6]{images/img3.png}\\
+{Zostaliœmy przeniesieni na stronê, gdzie pojawi³ siê nowy temat.}
+\end{figure}
+\begin{figure}[!htbp]
+\includegraphics[scale=0.6]{images/img4.png}\\
+{Na stronie nowego tematu nie widnieje jeszcze ¿aden wpis.}
+\end{figure}
+\begin{figure}[!htbp]
+\includegraphics[scale=0.6]{images/img5.png}\\
+{Dodajemy nowy wpis i zamieszczamy go na stronie tematu.}
+\end{figure}
+\begin{figure}[h]
+\includegraphics[scale=0.6]{images/img6.png}\\
+{Wszystkie wpisy wyœwietlane s¹ w kolejnoœci od najnowszego.}
+\end{figure}
+\begin{figure}[!htbp]
+\includegraphics[scale=0.6]{images/img7.png}\\
+{W dowolnej chwili mo¿emy edytowaæ zamieszczony wczeœniej wpis.}
+\end{figure}
 
 \section{Sprint 2}
 
@@ -676,19 +717,21 @@ funkcje widoku, aby u¿ytkownicy mogli widzieæ jedynie w³asne dane.
 
 \subsection{Realizacja}
 
-\paragraph{Tytu³ zadania.} <<Tytu³>>.
-\subparagraph{Wykonawca.} <<Wykonawca>>.
-\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}>>.
+\paragraph{Tytu³ zadania.} Wylogowanie siê z aplikacji.
+\subparagraph{Wykonawca.} Krzysztof Jamro.
+\subparagraph{Realizacja.} . 
 
-\paragraph{Tytu³ zadania.} <<Tytu³>>.
-\subparagraph{Wykonawca.} <<Wykonawca>>.
-\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}>>.
+\paragraph{Tytu³ zadania.} Strona rejestracji u¿ytkownika.
+\subparagraph{Wykonawca.} Damian Hada³a, Krzysztof Radoñ, Dawid Su³owicz.
+\subparagraph{Realizacja.} .
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³óWn¹ po zakoñczonym sukcesem procesie rejestracji.
+\subparagraph{Wykonawca.} Dawid Su³owicz.
+\subparagraph{Realizacja.} .
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz rejestracji.
+\subparagraph{Wykonawca.} Krzysztof Jamro.
+\subparagraph{Realizacja.} .
 
 \paragraph{<<Tutaj dodawaæ kolejne zadania>>}
 

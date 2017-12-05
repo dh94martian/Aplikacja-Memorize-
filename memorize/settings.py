@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Nasze aplikacje
     'memorizeapp',
+    'users',
 ]
 
 MIDDLEWARE = [
