@@ -8,3 +8,5 @@ def logout_view(request):
     """Wylogowanie uzytkownika"""
     logout(request)
     return HttpResponseRedirect(reverse('memorizeapp:index'))
+def register():
+    return HttpResponseRedirect(reverse('memorizeapp:index'))   
