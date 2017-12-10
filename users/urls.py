@@ -8,4 +8,6 @@ from . import views
 urlpatterns = [
     #Strona logowania
     url(r'^login/$', login, {'template_name': 'users/login.html'}, name='login'),
+    #Strona wylogowania
+    url(r'^logout/$', views.logout_view, name='logout'),
 ]
