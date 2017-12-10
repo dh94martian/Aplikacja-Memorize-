@@ -2,8 +2,9 @@
   <a href="{% url 'memorizeapp:index' %}">Memorize!</a> -
   <a href="{% url 'memorizeapp:topics' %}">Tematy</a> -
   {% if user.is_authenticated %}
-    Witaj, {{ user.username }}.
+    Witaj, {{ user.username }}!
   {% else %}
+    <a href="{% url 'users:register' %}">Rejestruj</a> -
     <a href="{% url 'users:login' %}">Zaloguj</a>
   {% endif %}
 </p>

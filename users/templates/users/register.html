@@ -1,0 +1,9 @@
+{% extends "memorizeapp/base.html" %}
+
+{% block content %}
+  <form method="post" action="{% url 'users:register' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="hidden" name="next" value="{% url 'memorizeapp:index' %}"/>
+  </form>
+{% endblock content %}
