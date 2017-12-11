@@ -9,7 +9,7 @@
   {% csrf_token %}
   {{ form.as_p }}
 
-  <button name="submit">Zaloguj</button>
+  <button name="submit">Zaloguj się</button>
   <input type="hidden" name="next" value="{% url 'memorizeapp:index' %}"/>
   </form>
 {% endblock content %}
