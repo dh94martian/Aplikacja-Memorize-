@@ -754,7 +754,12 @@ W szablonie dla strony logowania \textit{login.html} umieszczam przycisk wysy³aj
 
 \paragraph{Tytu³ zadania.} Wylogowanie siê z aplikacji.
 \subparagraph{Wykonawca.} Krzysztof Jamro.
-\subparagraph{Realizacja.} . 
+\subparagraph{Realizacja.} Na samym pocz¹tku definiujê wzorzec adresu URL dla ³¹cza wylogowania. Ten wzorzec adresu zostanie przekazany do funkcji wylogowania.  
+Tworzê funkcjê widoku logout\_view() i importujê wbudowan¹ w Django funkcjê logout(). Za jej pomoc¹ u¿ytkownik bêdzie mia³ mo¿liwoœæ wylogowania siê i zaraz po wylogowaniu 
+zostanie przeniesiony na stronê g³ówn¹. Na koniec w bazowym szablonie dodajê ³¹cze do  wylogowania, które bêdzie widoczne na ka¿dej stronie: 
+\begin{verbatim}
+<a href="{% url 'users:logout' %}">Wyloguj siê</a>
+\end{verbatim}
 
 \paragraph{Tytu³ zadania.} Strona rejestracji u¿ytkownika.
 \subparagraph{Wykonawca.} Damian Hada³a, Krzysztof Radoñ, Dawid Su³owicz.
