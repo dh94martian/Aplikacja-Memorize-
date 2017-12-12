@@ -592,7 +592,8 @@ przeszacowaniem. Rzeczywisty czas realizacji tego zadania zamyka siê w estymacie
 \subparagraph{Realizacja.} Przygotowujê przekierowanie u¿ytkownika na stronê tematu, do którego zosta³ dodany nowy wpis. Na tej stronie u¿ytkownik powinien zobaczyæ nowy 
 wpis na liœcie wszystkich wpisów dla danego tematu: 
 \begin{verbatim}
-return HttpResponseRedirect(reverse('memorizeapp:topic', args=[topic_id]))
+return HttpResponseRedirect(reverse('memorizeapp:topic', 
+args=[topic_id]))
 \end{verbatim}
 Wywo³anie reverse() wymaga dwóch argumentów. Pierwszy to nazwa wzorca adresu URL, na podstawie którego zostaje gnenerowany adres URL. Drugi to lista args 
 zawieraj¹ca wszystkie argumenty, które musz¹ byæ umieszczone w adresie URL. Estymata tego zadania okaza³a siê byæ mniejsza, ni¿ zak³adaliœmy. Ostatecznie jest to rozmiar "S". 
@@ -716,6 +717,40 @@ funkcje widoku, aby u¿ytkownicy mogli widzieæ jedynie w³asne dane.
 \end{itemize}
 
 \subsection{Realizacja}
+
+\paragraph{Tytu³ zadania.} Strona logowania u¿ytkownika.
+\subparagraph{Wykonawca.} Krzysztof Radoñ.
+\subparagraph{Realizacja.} Podczas implementacji strony logowania wykorzysta³em domyœlny widok \textit{login} wbudowany w Django. 
+Tworzê nowy plik \textit{urls.py} w folderze \textit{memorize/users} i dodajê nieco ró¿ni¹cy siê od poprzednich wzorzec adresu URL dla strony logowania: 
+\begin{verbatim}
+url(r'^login/$', login, {'template_name': 'users/login.html'}, 
+name='login') 
+\end{verbatim}
+Teraz kiedy u¿ytkownika za¿¹da wyœwietlenia strony logowania, domyœlnie Django wykorzysta wbudowany widok \textit{login}. Nadal jednak trzeba dostarczaæ informacjê o 
+szablonie dla tej strony. W podkatalogu \textit{templates} umieszczam plik szablonu dla strony logowania. Ten szablon rozszerza szablon bazowy \textit{base.html}, co gwarantuje, 
+¿e strona logowania bêdzie mia³a taki sam wygl¹d i sposób dzia³ania jak pozosta³a czêœæ aplikacji "Memorize!". W poni¿szym fragmencie szablonu strony logowania 
+sprawdzam, czy wyst¹pi³y b³êdy podczas wype³niania formularza logowania: 
+\begin{verbatim}
+{% if form.errors %}
+  <p>Nazwa u¿ytkownika i has³o s¹ nieprawid³owe. 
+  Proszê spróbowaæ ponownie.</p>
+{% endif %}
+\end{verbatim}
+Je¿eli wyst¹pi b³¹d, formularz wyœwietli komunikat b³êdu informuj¹cy, ¿e podana nazwa u¿ytkownika i has³o nie pasuj¹ do informacji przechowywanych w bazie danych. 
+Nastêpnie w szablonie bazowym \textit{base.html} umieszczam ³¹cze prowadz¹ce na stronê logowania, aby by³o wyœwietlane na ka¿dej stronie. 
+
+\paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie logowania.
+\subparagraph{Wykonawca.} Krzysztof Radoñ.
+\subparagraph{Realizacja.} Korzystam z wbudowanej funkcji widoku login i ustanawiam przekierowanie na stronê g³ówn¹. Teraz u¿ytkownik po udanym zalogowaniu 
+zostanie przeniesiony na stronê g³ówn¹ aplikacji.  
+
+\paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz logowania.
+\subparagraph{Wykonawca.} Krzysztof Radoñ.
+\subparagraph{Realizacja.} Kiedy formularz zostanie wyœwietlony potrzebny nam siê przycisk odpowiedzialny za przes³anie wype³nionego formularza. 
+W szablonie dla strony logowania \textit{login.html} umieszczam przycisk wysy³aj¹cy ten formularz: 
+ \begin{verbatim}
+<button name="submit">Zaloguj siê</button>
+\end{verbatim}
 
 \paragraph{Tytu³ zadania.} Wylogowanie siê z aplikacji.
 \subparagraph{Wykonawca.} Krzysztof Jamro.
