@@ -759,11 +759,14 @@ Tworzê funkcjê widoku logout\_view() i importujê wbudowan¹ w Django funkcjê logo
 zostanie przeniesiony na stronê g³ówn¹. Na koniec w bazowym szablonie dodajê ³¹cze do  wylogowania, które bêdzie widoczne na ka¿dej stronie: 
 \begin{verbatim}
 <a href="{% url 'users:logout' %}">Wyloguj siê</a>
-\end{verbatim}
+\end{verbatim} 
 
 \paragraph{Tytu³ zadania.} Strona rejestracji u¿ytkownika.
 \subparagraph{Wykonawca.} Damian Hada³a, Krzysztof Radoñ, Dawid Su³owicz.
-\subparagraph{Realizacja.} .
+\subparagraph{Realizacja.} Do utworzenia strony rejestracji u¿ytkownika pos³u¿y nam wbudowany w Django formularz \textit{UserCreationForm}. 
+Sam formularz nie wystarczy. Utworzymy w³asn¹ funkcjê widoku i szablon. Najpierw jednak dodamy wzorzec URL dla strony rejestracji w pliku \textit{urls.py}. 
+Ten wzorzec przeka¿ê ¿¹dania do funkcji rejestracji, któr¹ teraz utworzymy. Nasza funkcja rejestracji bêdzie siê nazywaæ \textit{register()}. Funkcja bêdzie wyœwietlaæ 
+pusty formularz rejestracji, a póŸniej przetwarzaæ go, jak zostanie ju¿ wype³niony. Dziêki tej funkcji bêdzie odbywaæ siê rejestracja u¿ytkownika. 
 
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie rejestracji.
 \subparagraph{Wykonawca.} Dawid Su³owicz.
