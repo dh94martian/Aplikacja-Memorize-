@@ -784,11 +784,30 @@ Za pomoc¹ metody as\_p upewniam siê, ¿e framework bêdzie prawid³owo wyœwietla³ w
 wype³niony. 
 
 \paragraph{Tytu³ zadania.} Umo¿liwienie u¿ytkownikom bycia w³aœcicielami swoich danych.
-\subparagraph{Wykonawca.} Zespó³ Deweloperski.
-\subparagraph{Realizacja.} .
+\subparagraph{Wykonawca.} Krzysztof Radoñ.
+\subparagraph{Realizacja.} Za pomoc¹ dekoratora \textit{@login\_required} ograniczam dostêp do strony tematów. Teraz tylko zarejestrowani u¿ytkownicy maj¹ dostêp do listy tematów. Kod funkcji \textit{@login\_required} sprawdza, czy u¿ytkownik jest zalogowany, poniewa¿ jest to warunek konieczny do wykonania funkcji topics(): 
+\begin{verbatim}
+@login_required
+def topics(request):
+"""Wyœwietlenie wszystkich tematów"""
+--ciêcie--
+\end{verbatim}
+Je¿eli u¿ytkownik nie jest zalogowany, to zostanie przekierowany na stronê logowania. W naszej aplikacji pozostawimy jako publicznie dostêpne 
+strony: g³ówn¹, rejestracji i  wylogowania. Dla wszystkich pozosta³ych stron u¿ywam dekoratora \textit{@login\_required}. 
+Wprowadzam teraz zmianê w funkcji  widoku tematów polegaj¹c¹ na tym, ¿e u¿ytkownik bêdzie móg³ wyœwietlaæ jedynie tematy utworzone przez siebie. 
+Aby unikn¹æ mo¿liwoœci podgl¹du tematów przez u¿ytkowników maj¹cych adres tematu innego u¿ytkownika, przeprowadzam operacjê weryfikacji jeszcze przed 
+pobraniem ¿¹danych wpisów w funkcji widoku tematu: 
+\begin{verbatim}
+#Sprawdzenie poziomu uprawnieñ
+if topic.owner != request.user:
+raise Http404
+\end{verbatim}
+Je¿eli bie¿¹cy u¿ytkownik nie bêdzie  w³aœcicielem ¿¹danego tematu, Django zwróci stronê z kodem b³êdu 404. OdpowiedŸ 404 to standardowa odpowiedŸ b³êdu 
+zwracana w sytuacji, gdy ¿¹dany zasób nie istnieje na serwerze. Tak samo postêpujê ze stronami edycji i dodawania nowego wpisu. Na koniec modyfikujê 
+kod funkcji \textit{new\_topic()} tak, aby ka¿dy nowo tworzony temat zosta³ powi¹zany z bie¿¹cym u¿ytkownikiem. 
 
 \subsection{Sprint Review/Demo}
-<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
+Mo¿emy teraz dodawaæ dowoln¹ liczbê nowych tematów dla ró¿nych u¿ytkowników. Ka¿dy u¿ytkownik zachowa dostêp jedynie do w³asnych danych niezale¿nie od rodzaju przeprowadzanych na nich operacji: przegl¹danie wpisów, tworzenie nowych lub modyfikowanie tych ju¿ istniej¹cych. 
 
 \section{Sprint 3}
 
