@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Inne
+    'bootstrap3',
     # Nasze aplikacje
     'memorizeapp',
     'users',
@@ -123,5 +125,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 #Nasze ustawienia
-
 LOGIN_URL = '/users/login/'
+
+#Ustawienia Bootstrapa
+BOOTSTRAP3 = {
+    'include_jquery': True,
+    }
