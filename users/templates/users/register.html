@@ -4,7 +4,7 @@
   <form method="post" action="{% url 'users:register' %}">
     {% csrf_token %}
     {{ form.as_p }}
-    <button name="submit">Rejestruj</button>
+    <button name="submit">Zarejestruj się</button>
     <input type="hidden" name="next" value="{% url 'memorizeapp:index' %}"/>
   </form>
 {% endblock content %}
