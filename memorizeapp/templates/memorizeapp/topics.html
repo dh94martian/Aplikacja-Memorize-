@@ -1,21 +1,30 @@
 {% extends "memorizeapp/base.html" %}
 
 {% block header %}
-  <h1>Tematy</h1>
+	<h2>{{ topic }}</h2>
 {% endblock header %}
 
 {% block content %}
-  <ul>
-    {% for topic in topics %}
-      <li>
-        <h3>
-          <a href="{% url 'memorizeapp:topic' topic.id %}">{{ topic }}</a>
-        </h3>
-      </li>
-    {% empty %}
-      <li>Nie został jeszcze dodany żaden temat.</li>
-    {% endfor %}
-  </ul>
 
-  <h3><a href="{% url 'memorizeapp:new_topic' %}">Dodaj nowy temat</h3>
+	<p>
+		<a href="{% url 'memorizeapp:new_entry' topic.id %}">Dodaj nowy wpis</a>
+	</p>
+	
+	{% for entry in entries %}
+		<div class='panel panel-default'>
+			<div class='panel-heading'>
+				<h3>
+					{{ entry.date_added|date:'d M Y H:i' }}
+					<small>
+						<a href="{% url 'memorizeapp:eddit_entry' entry.id %}">Edytuj wpis</a>
+					</small>
+				</h3>
+			</div>
+			<div class='panel-body'>
+				{{ entry.text|linebreaks }}
+			</div>
+		</div>
+	{% empty %}
+		Nie ma jeszcze żadnego wpisu dla tego tematu.
+	{% endfor %}
 {% endblock content %}
