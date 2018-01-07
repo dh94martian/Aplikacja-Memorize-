@@ -1,17 +1,21 @@
 {% extends "memorizeapp/base.html" %}
 
+{% block header %}
+  <h1>Tematy</h1>
+{% endblock header %}
+
 {% block content %}
-
-  <p>Tematy</p>
-
   <ul>
     {% for topic in topics %}
-      <li><a href="{% url 'memorizeapp:topic' topic.id %}">{{ topic }}</a></li>
+      <li>
+        <h3>
+          <a href="{% url 'memorizeapp:topic' topic.id %}">{{ topic }}</a>
+        </h3>
+      </li>
     {% empty %}
       <li>Nie został jeszcze dodany żaden temat.</li>
     {% endfor %}
   </ul>
 
-  <a href="{% url 'memorizeapp:new_topic' %}">Dodaj nowy temat</a>
-
+  <h3><a href="{% url 'memorizeapp:new_topic' %}">Dodaj nowy temat</h3>
 {% endblock content %}
