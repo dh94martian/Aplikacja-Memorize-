@@ -1,19 +1,16 @@
 {% extends "memorizeapp/base.html" %}
 
 {% block header %}
-	<div class='jumbotron'>
-		<h1>Monitoruj postępy w nauce</h1>
-	</div>
+  <div class='jumbotron'>
+   <h1>Monitoruj postępy w nauce</h1>
+  </div>
 {% endblock header %}
 
 {% block content %}
-	<p>Aplikacja "Memorize!" pozwala użytkownikom na zapisywanie 
-	interesujących ich informacji i tym samym na dodawanie wpisów 
-	do dziennika podczas poznawania danego zagadnienia.</p>
-	<h2>
-		<a href="{% url 'users:register' %}">Zarejestruj się</a>, aby zacząć korzystać z aplikacji Memorize! oraz wyświetlać listę poznawanych zagadnień.
-	</h2>
-	<h2>
-		Jeżeli nauczyś się czegoś nowego, to w odpowiednim temacie dodaj wpis podsumowujący to, czego się właśnie nauczyłeś.
-	</h2>
+   <h2>
+    <a href="{% url 'users:register' %}">Zarejestruj się</a>, aby zacząć korzystać z aplikacji Memorize! oraz wyświetlać listę poznawanych zagadnień.
+   </h2>
+   <h2>
+     Jeżeli nauczyś się czegoś nowego, to w odpowiednim temacie dodaj wpis podsumowujący to, czego się właśnie nauczyłeś.
+   </h2>
 {% endblock content %}
