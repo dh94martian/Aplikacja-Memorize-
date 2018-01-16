@@ -1,0 +1,1 @@
+Istnienie tego pliku gwarantuje, że katalog memorize/static/ będzie dodany do projektu.
