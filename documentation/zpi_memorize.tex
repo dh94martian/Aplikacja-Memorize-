@@ -807,6 +807,7 @@ zwracana w sytuacji, gdy ¿¹dany zasób nie istnieje na serwerze. Tak samo postêpu
 kod funkcji \textit{new\_topic()} tak, aby ka¿dy nowo tworzony temat zosta³ powi¹zany z bie¿¹cym u¿ytkownikiem. 
 
 \subsection{Sprint Review/Demo}
+Drugi sprint zosta³ zakoñczony powodzeniem. Zrealizowaliœmy wszystkie zaplanowane na ten sprint Backlog Item'y.
 Mo¿emy teraz dodawaæ dowoln¹ liczbê nowych tematów dla ró¿nych u¿ytkowników. Ka¿dy u¿ytkownik zachowa dostêp jedynie do w³asnych danych niezale¿nie od rodzaju przeprowadzanych na nich operacji: przegl¹danie wpisów, tworzenie nowych lub modyfikowanie tych ju¿ istniej¹cych. 
 
 \section{Sprint 3}
@@ -843,28 +844,46 @@ Mo¿emy teraz dodawaæ dowoln¹ liczbê nowych tematów dla ró¿nych u¿ytkowników. Ka¿
 \subsection{Realizacja}
 
 \paragraph{Tytu³ zadania.} Zdefiniowanie interaktywnego paska nawigacji.
-\subparagraph{Wykonawca.} Damian Hada³a.
-\subparagraph{Realizacja.} .
+\subparagraph{Wykonawca.} Krzysztof Radoñ.
+\subparagraph{Realizacja.} Definiujê element \textit{nav}, który wskazuje na pocz¹tek sekcji zawieraj¹cej ³¹cza nawigacyjne, które maj¹ znaleŸæ siê na stronie. 
+Nastêpnie definiujê przycisk, który bêdzie wyœwietlany, gdy okno przegl¹darki bêdzie mia³o zbyt ma³¹ szerokoœæ, aby wyœwietliæ poziomo ca³y pasek nawigacji. 
+Kiedy u¿ytkownik aplikacji naciœnie ten przycisk, elementy nawigacyjne pojawi¹ siê na rozwijanej liœcie. Po lewej stronie paska nawigacyjnego umieszczam nazwê aplikacji, która 
+jest jednoczeœnie ³¹czem prowadz¹cym do strony g³ównej. Przygotowujê zestaw ³¹czy umo¿liwiaj¹cych u¿ytkownikom poruszanie siê po aplikacji internetowej.  
+Pasek nawigacji to w zasadzie lista zaczynaj¹ca siê od znacznika \textit{ul}. Przy prawej krawêdzi paska nawigacyjnego zamieszczam ³¹cza rejestracji i logowania. 
+Estymacja czasu trwania tego zadania jest zgodna z wczeœniejszymi za³o¿eniami. 
 
 \paragraph{Tytu³ zadania.} Nadanie stylu stronie g³ównej.
-\subparagraph{Wykonawca.} Krzysztof Radoñ.
-\subparagraph{Realizacja.} .
+\subparagraph{Wykonawca.} Damian Hada³a.
+\subparagraph{Realizacja.} Do uaktualnienia strony g³ównej u¿ywam Bootstrapa i jego elementu o nazwie jumbotron, czyli du¿ego prostok¹ta, który bêdzie siê wyró¿nia³ 
+na stronie. Wewn¹trz tego nowego elementu umieszczam chwytliwy slogan, aby u¿ytkownik odwiedzaj¹cy nasz¹ witrynê w internecie po raz pierwszy 
+domyœli³ siê od razu, jakie jest przeznaczenie aplikacji Memorize. Poni¿ej dodajê tekst dostarczaj¹cy nieco wiêcej informacji. Zachêca on u¿ytkowników do 
+utworzenia konta oraz przedstawia dwie najwa¿niejsze akcje, czyli dodawanie nowych tematów i wpisów. Strona g³ówna bêdzie wygl¹da³a zdecydowanie lepiej ni¿ 
+w pierwotnej fazie powstawania aplikacji, kiedy by³a pozbawiona stylów. Szacowana estymata czasowa "L" dla tego zadania okaza³a siê byæ odpowiednia. 
 
 \paragraph{Tytu³ zadania.} Nadanie stylów stronom logowania i rejestracji.
-\subparagraph{Wykonawca.} Krzysztof Jamro.
-\subparagraph{Realizacja.} .
+\subparagraph{Wykonawca.} Krzysztof Jamro, Krzysztof Radoñ.
+\subparagraph{Realizacja.} Wprowadzamy zmiany w formularzach logowania i rejestracji, aby zapewniæ im spójny wygl¹d z pozosta³ymi stronami. 
+Wczytujemy do szablonów \textit{login.html} i \textit{register.html} znaczniki \textit{bootstrap3}. Definiujemy blok \textit{header}, który bêdzie opisywa³ przeznaczenie tych stron. 
+U¿ywamy szablonu znacznika \textit{bootstrap\_form} do wyœwietlenia formularza. Za pomoc¹ znacznika \textit{buttons} dodajemy styl dla przycisków. 
+Estymata okreœlona w koszulkach jako "L" daje dobry obraz pracy w³o¿onej w realizacjê tego zadania. 
 
 \paragraph{Tytu³ zadania.} Nadanie stylu stronie tematów.
-\subparagraph{Wykonawca.} Dawid Su³owicz.
-\subparagraph{Realizacja.} .
+\subparagraph{Wykonawca.} Dawid Su³owicz, Krzysztof Radoñ.
+\subparagraph{Realizacja.} Wewn¹trz bloku \textit{header} w szablonie \textit{topics.html} dodajemy nag³ówek \textit{Tematy}. 
+Ka¿dy temat umieszczamy w elemencie \textit{h3}, aby by³ nieco wiêkszy. Takie samo podejœcie stosujemy dla ³¹cza, za pomoc¹ którego bêdzie dodawany nowy temat. 
+Okreœlona wczeœniej estymata dobrze odzwierciedla czas spêdzony nad realizacj¹ tego zadania. 
 
 \paragraph{Tytu³ zadania.} Nadanie stylów wpisom na stronie tematu.
 \subparagraph{Wykonawca.} Damian Hada³a.
-\subparagraph{Realizacja.} .
+\subparagraph{Realizacja.} Do strony tematu u¿ywam paneli Bootstrapa, aby ka¿dy wpis na stronie siê wyró¿nia³. Ten panel dla ka¿dego wpisu to po prostu znacznik div z 
+predefiniowanymi stylami. Przede wszystkim temat umieszczam w nag³ówku. Nastêpnie pozbywam siê struktury nieuporz¹dkowanej listy, jak¹ poprzednio utworzyliœmy w szablonie tematu. Tworzê znacznik div, który zawiera dwa nastêpne zagnie¿d¿one elementy. Pierwszy element zawiera datê wpisu oraz ³¹cze pozwalaj¹ce na jego edycjê. Aby wyœwietliæ te 
+informacje u¿y³em znacznika h3, przy czym doda³em te¿ znacznik small wokó³ ³¹cza edycji, aby by³o ono nieco mniejsze od znacznika czasu. Drugi element zagnie¿d¿ony zawiera 
+aktualn¹ treœæ wpisu. Za³o¿ona wczeœniej estymata w sprawdzi³a siê przypadku tego zadania. 
 
 \subsection{Sprint Review/Demo}
-<<Sprawozdanie z przegl¹du Sprint'u -- czy za³o¿ony cel (przyrost) zosta³ osi¹gniêty oraz czy wszystkie zaplanowane Backlog Item'y zosta³y zrealizowane? Demostracja przyrostu produktu>>.
-
+Trzeci sprint zosta³ zakoñczony powodzeniem. Wszystkie za³o¿one zadania zosta³y zrealizowane. 
+Aplikacja sta³a siê bardziej przejrzysta, charakteryzuje siê spójnym stylem i jest czytelna. Od razu wiadomo do czego s³u¿y.  
+Komunikaty maj¹ styl spójny ze stron¹ i doskonale wspó³graj¹ z ogólnym wygl¹dem naszej aplikacji. Zak³adany przyrost projektu zosta³ osi¹gniêty. 
 
 \section{Sprint 4}
 
