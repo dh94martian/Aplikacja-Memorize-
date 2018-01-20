@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0v%fvg@^)d%j2uhz-q0gbicunc+!o68=nx^wbh0fdlhj@o6l1y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -142,8 +142,10 @@ if os.getcwd() == '/app':
 
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-    #Zezwolenie na wszystkie nagłówki hosta
-    ALLOWED_HOSTS = ['*']
+    #Zezwolenie na nagłówki hosta
+    ALLOWED_HOSTS = ['zpi-memorize.herokuapp.com']
+
+    DEBUG = False
 
     #Konfiguracja zasobów
     BASE_DIR = os.path.dirname(os.path.abspath(__file__))
