@@ -25,7 +25,7 @@ SECRET_KEY = '0v%fvg@^)d%j2uhz-q0gbicunc+!o68=nx^wbh0fdlhj@o6l1y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -145,8 +145,8 @@ if os.getcwd() == '/app':
     ALLOWED_HOSTS = ['*']
 
     #Konfiguracja zasobów
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-    STATIC_ROOT = 'staticfiles'
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     STATICFILES_DIRS = (
         os.path.join(BASE_DIR, 'static'),
     )
