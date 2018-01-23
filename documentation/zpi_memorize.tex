@@ -878,7 +878,7 @@ Okreœlona wczeœniej estymata dobrze odzwierciedla czas spêdzony nad realizacj¹ t
 \subparagraph{Realizacja.} Do strony tematu u¿ywam paneli Bootstrapa, aby ka¿dy wpis na stronie siê wyró¿nia³. Ten panel dla ka¿dego wpisu to po prostu znacznik div z 
 predefiniowanymi stylami. Przede wszystkim temat umieszczam w nag³ówku. Nastêpnie pozbywam siê struktury nieuporz¹dkowanej listy, jak¹ poprzednio utworzyliœmy w szablonie tematu. Tworzê znacznik div, który zawiera dwa nastêpne zagnie¿d¿one elementy. Pierwszy element zawiera datê wpisu oraz ³¹cze pozwalaj¹ce na jego edycjê. Aby wyœwietliæ te 
 informacje u¿y³em znacznika h3, przy czym doda³em te¿ znacznik small wokó³ ³¹cza edycji, aby by³o ono nieco mniejsze od znacznika czasu. Drugi element zagnie¿d¿ony zawiera 
-aktualn¹ treœæ wpisu. Za³o¿ona wczeœniej estymata w sprawdzi³a siê przypadku tego zadania. 
+aktualn¹ treœæ wpisu. Za³o¿ona wczeœniej estymata sprawdzi³a siê przypadku tego zadania. 
 
 \subsection{Sprint Review/Demo}
 Trzeci sprint zosta³ zakoñczony powodzeniem. Wszystkie za³o¿one zadania zosta³y zrealizowane. 
@@ -921,7 +921,11 @@ Komunikaty maj¹ styl spójny ze stron¹ i doskonale wspó³graj¹ z ogólnym wygl¹dem 
 
 \paragraph{Tytu³ zadania.} Wdro¿enie aplikacji "Memorize!".
 \subparagraph{Wykonawca.} Zespó³ deweloperski.
-\subparagraph{Realizacja.} .
+\subparagraph{Realizacja.} Do wdro¿enia naszej aplikacji wykorzystamy \textit{Heroku}, platformê sieciow¹ pozwalaj¹c¹ na zarz¹dzanie operacj¹ wdra¿ania aplikacji internetowej. 
+Bezp³atne konto w \textit{Heroku} ma pewne ograniczenia, ale nie s¹ one dotkliwe i praktycznie bez ¿adnych kosztów mo¿emy eksperymentowaæ z wdro¿eniem aplikacji. 
+Konieczne jest zainstalowanie kilku dodatkowych pakietów, pomagaj¹cych we wdro¿eniu projektu na serwerze WWW. Pakiet \textit{dj-database-url} pomaga Django w komunikacji z baz¹ danych u¿ywan¹ przez \textit{Heroku}, a pakiety static pomagaj¹ w prawid³owym zarz¹dzaniu plikami statycznymi. 
+Pliki statyczne zawieraj¹ regu³y stylów oraz skrypty. Na pocz¹tek \textit{Heroku} musi wiedzieæ jakie pakiety s¹ niezbêdne do dzia³ania naszego projektu. 
+Zapisujemy w pliku \textit{requirements.txt} nazwy wszystkich pakietów aktualnie zainstalowanych w projekcie. Upewniamy siê, ¿e platforma sieciowa bêdzie u¿ywaæ dok³adnie takiej samej wersji Pythona, jakiej u¿ywaliœmy podczas pracy nad projektem. Na koniec przygotowujemy plik konfiguracyjny zawieraj¹cy ustawienia dedykowane dla œrodowiska \textit{Heroku}. Z poziomu aktywnej sesji pow³oki przekazujemy pliki z repozytorium Gita do repozytorium utworzonego na \textit{Heroku}. Uzyskujemy adres URL wdro¿onego, ale jeszcze nie skonfigurowanego projektu. Konfigurujemy bazê danych w œrodowisku \textit{Heroku}. Jako, ¿e nie kopiowaliœmy danych lokalnych do serwera (co jest normaln¹ praktyk¹), tworzymy nowe konto super - u¿ytkownika. Estymata czasowa "XL" dobrze charakteryzuje ca³kowity nak³ad pracy potrzebny do realizacji tego zadania.
 
 \paragraph{Tytu³ zadania.} <<Tytu³>>.
 \subparagraph{Wykonawca.} <<Wykonawca>>.
@@ -929,6 +933,8 @@ Komunikaty maj¹ styl spójny ze stron¹ i doskonale wspó³graj¹ z ogólnym wygl¹dem 
 for (i=1; i<10; i++)
 ...
 \end{verbatim}>>.
+
+\subsection{Sprint Review/Demo}
 
 \begin{thebibliography}{9}
 
