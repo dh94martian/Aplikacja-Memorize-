@@ -771,7 +771,7 @@ pusty formularz rejestracji, a póŸniej przetwarzaæ go, jak zostanie ju¿ wype³nio
 \paragraph{Tytu³ zadania.} Utworzenie przekierowania na stronê g³ówn¹ po zakoñczonym sukcesem procesie rejestracji.
 \subparagraph{Wykonawca.} Dawid Su³owicz.
 \subparagraph{Realizacja.} Ju¿ po udanej operacji rejestracji nowego u¿ytkownika, przekierowujemy go na stronê g³ówn¹. Na niej u¿ytkownik 
-zobaczy spersonalizowane powitanie informuj¹cego go zakoñczonej sukcesem rejestracji. 
+zobaczy spersonalizowane powitanie informuj¹ce go o zakoñczonej sukcesem rejestracji. 
 
 \paragraph{Tytu³ zadania.} Utworzenie przycisku przesy³aj¹cego formularz rejestracji.
 \subparagraph{Wykonawca.} Krzysztof Jamro.
@@ -812,7 +812,7 @@ Mo¿emy teraz dodawaæ dowoln¹ liczbê nowych tematów dla ró¿nych u¿ytkowników. Ka¿
 
 \section{Sprint 3}
 
-\subsection{Cel} Nadamy styl aplikacji "Memorize!", aby prezentowa³a sie profesjonalnie na wszystkich nowoczesnych urz¹dzeniach,  pocz¹wszy od tych pod³¹czonych do ogromych p³askich monitorów a¿ po smartfony. 
+\subsection{Cel} Nadamy styl aplikacji "Memorize!", aby prezentowa³a siê profesjonalnie na wszystkich nowoczesnych urz¹dzeniach,  pocz¹wszy od tych pod³¹czonych do ogromych p³askich monitorów a¿ po smartfony. 
 
 \subsection{Sprint Planning/Backlog}
 
@@ -925,16 +925,17 @@ Komunikaty maj¹ styl spójny ze stron¹ i doskonale wspó³graj¹ z ogólnym wygl¹dem 
 Bezp³atne konto w \textit{Heroku} ma pewne ograniczenia, ale nie s¹ one dotkliwe i praktycznie bez ¿adnych kosztów mo¿emy eksperymentowaæ z wdro¿eniem aplikacji. 
 Konieczne jest zainstalowanie kilku dodatkowych pakietów, pomagaj¹cych we wdro¿eniu projektu na serwerze WWW. Pakiet \textit{dj-database-url} pomaga Django w komunikacji z baz¹ danych u¿ywan¹ przez \textit{Heroku}, a pakiety static pomagaj¹ w prawid³owym zarz¹dzaniu plikami statycznymi. 
 Pliki statyczne zawieraj¹ regu³y stylów oraz skrypty. Na pocz¹tek \textit{Heroku} musi wiedzieæ jakie pakiety s¹ niezbêdne do dzia³ania naszego projektu. 
-Zapisujemy w pliku \textit{requirements.txt} nazwy wszystkich pakietów aktualnie zainstalowanych w projekcie. Upewniamy siê, ¿e platforma sieciowa bêdzie u¿ywaæ dok³adnie takiej samej wersji Pythona, jakiej u¿ywaliœmy podczas pracy nad projektem. Na koniec przygotowujemy plik konfiguracyjny zawieraj¹cy ustawienia dedykowane dla œrodowiska \textit{Heroku}. Z poziomu aktywnej sesji pow³oki przekazujemy pliki z repozytorium Gita do repozytorium utworzonego na \textit{Heroku}. Uzyskujemy adres URL wdro¿onego, ale jeszcze nie skonfigurowanego projektu. Konfigurujemy bazê danych w œrodowisku \textit{Heroku}. Jako, ¿e nie kopiowaliœmy danych lokalnych do serwera (co jest normaln¹ praktyk¹), tworzymy nowe konto super - u¿ytkownika. Estymata czasowa "XL" dobrze charakteryzuje ca³kowity nak³ad pracy potrzebny do realizacji tego zadania.
-
-\paragraph{Tytu³ zadania.} <<Tytu³>>.
-\subparagraph{Wykonawca.} <<Wykonawca>>.
-\subparagraph{Realizacja.} <<Sprawozdanie z realizacji zadania (w tym ocena zgodnoœci z estymat¹). Kod programu (œrodowisko \texttt{verbatim}): \begin{verbatim}
-for (i=1; i<10; i++)
-...
-\end{verbatim}>>.
+Zapisujemy w pliku \textit{requirements.txt} nazwy wszystkich pakietów aktualnie zainstalowanych w projekcie. Upewniamy siê, ¿e platforma sieciowa bêdzie u¿ywaæ dok³adnie takiej samej wersji Pythona, jakiej u¿ywaliœmy podczas pracy nad projektem. Na koniec przygotowujemy plik konfiguracyjny zawieraj¹cy ustawienia dedykowane dla œrodowiska \textit{Heroku}. Z poziomu aktywnej sesji pow³oki przekazujemy pliki z repozytorium Gita do repozytorium utworzonego na \textit{Heroku}. Uzyskujemy adres URL wdro¿onego, ale jeszcze nie skonfigurowanego projektu. Konfigurujemy bazê danych w œrodowisku \textit{Heroku}. Jako, ¿e nie kopiowaliœmy danych lokalnych do serwera (co jest normaln¹ praktyk¹), tworzymy nowe konto super - u¿ytkownika. Tworzymy w³asne strony b³êdów 404 i 500. Estymata czasowa "XL" dobrze charakteryzuje ca³kowity nak³ad pracy potrzebny do realizacji tego zadania.
 
 \subsection{Sprint Review/Demo}
+Czwarty sprint zosta³ zakoñczony powodzeniem. Zrealizowaliœmy zaplanowany na ten sprint Backlog Item. 
+Wdro¿yliœmy i przetestowaliœmy projekt na serwerze WWW. Przygotowywana przez nas aplikacja sta³a siê dostêpna dla ka¿dego. 
+Demonstracja przyrostu:
+
+\begin{figure}[[h]
+\includegraphics[scale=0.32]{images/img13.png}\\
+{Aplikacja otwarta w przegl¹darce internetowej po wpisaniu adresu URL.}
+\end{figure}
 
 \begin{thebibliography}{9}
 
